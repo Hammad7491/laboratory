@@ -1,44 +1,80 @@
 <!-- HERO SECTION START -->
-<section style="background-color: #f2f2fc; padding: 70px 0 0; position: relative; overflow: hidden;">
-    <div style="max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 0 40px; flex-wrap: wrap;">
+<section class="eg-hero" style="position:relative; isolation:isolate; min-height:82vh; display:grid; place-items:center;">
 
-        <!-- LEFT TEXT -->
-        <div style="flex: 1 1 52%; min-width: 300px;">
-            <p style="font-size: 16px; color: #666; margin-bottom: 12px;">Creating websites since 2001</p>
-            <h3 style="font-size: 35px; font-weight: 700; color: #111; line-height: 1.3; margin-bottom: 20px;">
-                Website Design from only £299
-            </h3>
-            <p style="font-size: 17px; color: #333; max-width: 550px;">
-                We provide cost-effective web design, reliable web hosting, and SEO services for small businesses throughout the UK.
-            </p>
-        </div>
+  <!-- Background image (replace with your asset) -->
+  <div class="eg-hero-bg" style="
+      position:absolute; inset:0;
+      background:
+        linear-gradient(180deg, rgba(8,14,28,.55), rgba(8,14,28,.55)),
+        url('{{ asset('images/hero/emmagennix-hero.jpg') }}') center/cover no-repeat;
+      filter: saturate(105%);
+      z-index:-2;"></div>
 
-        <!-- RIGHT IMAGE WITH FADE-IN -->
-        <div style="flex: 1 1 45%; text-align: right; overflow: hidden;">
-            <img src="{{ asset('assets/images/pic1.webp') }}" 
-                 alt="Website Examples" 
-                 style="max-width: 320px; width: 100%; height: auto; border-radius: 6px; transform: translateX(100px); opacity: 0; transition: transform 1.5s ease, opacity 1.5s ease;"
-                 class="hero-img">
-        </div>
+  <!-- Subtle pattern overlay -->
+  <div aria-hidden="true" style="position:absolute;inset:0;z-index:-1;opacity:.25;mix-blend:overlay;
+      background-image: radial-gradient(#fff 1px, transparent 1px);
+      background-size: 3px 3px;"></div>
 
+  <!-- Content -->
+  <div class="eg-hero-inner" style="width:min(1200px, 92%); margin-inline:auto; text-align:center; color:#fff;">
+
+    <!-- Top kicker -->
+    <p class="eg-kicker" style="
+        margin:0 0 18px 0;
+        font: 500 14px/1.2 'Poppins', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        letter-spacing:.35em; text-transform:uppercase; opacity:.95;">
+      Welcome – Convenience Testing & Wellness Services
+    </p>
+
+    <!-- Main heading -->
+    <h1 class="eg-title" style="
+        margin:0;
+        font: 500 clamp(42px, 8vw, 120px)/1 'Poppins', ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        letter-spacing:.01em;">
+      WELLNESS
+      <span class="eg-script" style="
+          display:block; margin-top:.15em;
+          font: 400 clamp(28px, 6vw, 84px)/.9 'Pacifico', cursive;
+          color:#ffb44c; text-shadow:0 8px 24px rgba(0,0,0,.35);">
+        reimagined
+      </span>
+    </h1>
+
+    <!-- Bordered pill -->
+    <div class="eg-pill" style="
+        display:inline-block; margin: clamp(18px, 3.5vh, 28px) 0 24px 0; padding:14px 22px;
+        border-radius:14px; border:1.5px solid rgba(255,255,255,.65);
+        background:rgba(255,255,255,.06); backdrop-filter: blur(6px);
+        font: 500 clamp(12px, 1.8vw, 16px)/1.2 'Poppins', ui-sans-serif;
+        letter-spacing:.38em; text-transform:uppercase;">
+      Discover fast, at-home lab testing & IV therapy
     </div>
 
-    <!-- ✅ BOTTOM CURVE TOUCHING IMAGE -->
-    <svg viewBox="0 0 1440 220" xmlns="http://www.w3.org/2000/svg" style="display: block; width: 100%;">
-        <path fill="#ffffff" fill-opacity="1"
-              d="M0,160 C360,240 1080,80 1440,160 L1440,320 L0,320 Z">
-        </path>
-    </svg>
+    <!-- CTA -->
+    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+      <a href="#book" class="eg-btn-primary" style="
+          display:inline-block; padding:14px 26px; border-radius:12px;
+          background:linear-gradient(135deg,#06b6d4,#7c3aed); color:#fff; text-decoration:none;
+          font:500 16px/1 'Poppins', ui-sans-serif; box-shadow:0 14px 28px rgba(124,58,237,.35);
+          transition: transform .12s ease, filter .2s ease;">
+        Book Now
+      </a>
+      
+    </div>
+  </div>
 </section>
-
-<!-- Fade-in Animation Script -->
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const heroImg = document.querySelector('.hero-img');
-        setTimeout(() => {
-            heroImg.style.transform = 'translateX(0)';
-            heroImg.style.opacity = '1';
-        }, 200);
-    });
-</script>
 <!-- HERO SECTION END -->
+
+<!-- Fonts (script accent) -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"/>
+
+<style>
+  /* Hover effects for CTAs */
+  .eg-btn-primary:hover{ transform:translateY(-2px); filter:saturate(112%); }
+  .eg-btn-ghost:hover{ background:rgba(255,255,255,.18); transform:translateY(-2px); }
+
+  /* Small screens tweaks */
+  @media (max-width: 520px){
+    .eg-pill{ letter-spacing:.28em !important; padding:12px 16px !important; }
+  }
+</style>
