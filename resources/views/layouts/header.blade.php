@@ -38,16 +38,16 @@
               <ul class="eg-mega-list">
                 <li><a href="{{ route('phlebotomy') }}">Phlebotomy</a></li>
                 <li><a href="{{ route('covid') }}">Covid-19 Test</a></li>
-                <li><a href="#">Background Check</a></li>
-                <li><a href="#">Pre-vital Sign Check</a></li>
-                <li><a href="#">Pre-employment Verification</a></li>
+                <li><a href="{{ route('background') }}">Background Check</a></li>
+                <li><a href="{{ route('vital') }}">Pre-vital Sign Check</a></li>
+                <li><a href="{{ route('employment') }}">Pre-employment Verification</a></li>
               </ul>
             </div>
             <div class="eg-mega-col">
               <div class="eg-mega-title">SERVICES AVAILABLE AT SELECT LOCATIONS</div>
               <ul class="eg-mega-list">
-                <li><a href="#">Drug Test</a></li>
-                <li><a href="#">DNA Test</a></li>
+                <li><a href="{{ route('drug') }}">Drug Test</a></li>
+                <li><a href="{{ route('dna') }}">DNA Test</a></li>
                 <li><a href="#">Live FingerPrint Screen</a></li>
                 <li><a href="#">IV Hydration</a></li>
               </ul>
