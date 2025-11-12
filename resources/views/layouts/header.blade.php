@@ -2,12 +2,12 @@
 <header class="eg-header" style="position:fixed;top:0;left:0;right:0;width:100%;z-index:999;background:#fff;box-shadow:0 6px 18px rgba(15,23,42,.06);padding:14px 0;transition:box-shadow .2s ease, padding .2s ease;">
   <div class="eg-wrap" style="max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;box-sizing:border-box;">
 
-    <!-- Brand -->
-    <a href="{{ url('/') }}" class="eg-brand" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
-      <span style="display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#06b6d4,#7c3aed);color:#fff;box-shadow:0 10px 20px rgba(124,58,237,.25);">
-        <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M9 2h6v2h-1v5.6l4.8 4.8A4 4 0 0 1 17.6 20H6.4A4 4 0 0 1 3.2 14.4L8 9.6V4H9V2z"/></svg>
+    <!-- Brand (logo + dual-color name) -->
+    <a href="{{ url('/') }}" class="eg-brand" style="display:flex;align-items:center;gap:12px;text-decoration:none;">
+      <img src="{{ asset('assets/images/logo.png') }}" alt="EmmaGenix logo" class="eg-logo">
+      <span class="eg-brand-name">
+        <span class="eg-emma">Emma</span><span class="eg-genix">Genix</span>
       </span>
-      <span class="eg-name">Emma<span style="opacity:.9;">Genix</span></span>
     </a>
 
     <!-- Toggle (Mobile) -->
@@ -26,7 +26,6 @@
         <li class="eg-has-mega">
           <a href="#" class="eg-link eg-mega-trigger" aria-haspopup="true" aria-expanded="false">
             Services
-            <!-- caret -->
             <svg class="eg-caret" width="14" height="14" viewBox="0 0 24 24" aria-hidden="true" style="margin-left:6px;">
               <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -38,7 +37,7 @@
               <div class="eg-mega-title">SERVICES AVAILABLE ALL LOCATIONS</div>
               <ul class="eg-mega-list">
                 <li><a href="{{ route('phlebotomy') }}">Phlebotomy</a></li>
-                <li><a href="#">Covid-19 Test</a></li>
+                <li><a href="{{ route('covid') }}">Covid-19 Test</a></li>
                 <li><a href="#">Background Check</a></li>
                 <li><a href="#">Pre-vital Sign Check</a></li>
                 <li><a href="#">Pre-employment Verification</a></li>
@@ -101,18 +100,32 @@
 <!-- HEADER END -->
 
 <!-- FONT -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 
 <style>
   .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
   .eg-header, .eg-header *{font-family:'Poppins',ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;box-sizing:border-box}
   html,body{max-width:100%;overflow-x:hidden}
 
+  /* Brand styles */
+  .eg-logo{
+    width:42px;height:42px;object-fit:contain;border-radius:10px;display:block;
+    box-shadow:0 8px 18px rgba(0,0,0,.06);
+  }
+  .eg-brand-name{display:inline-flex;align-items:center;gap:4px;line-height:1}
+  .eg-emma{font-weight:700;font-size:24px;color:#001F3F;letter-spacing:.2px}
+  .eg-genix{
+    font-weight:700;font-size:24px;letter-spacing:.2px;
+    background:linear-gradient(135deg,#00b894 0%, #00c2ff 100%);
+    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  }
+
   /* Desktop show/hide helpers */
   @media (min-width:992px){.d-lg-block{display:block!important}.d-lg-none{display:none!important}}
-  @media (max-width:991.98px){.d-lg-block{display:none!important}.d-lg-none{display:inline-grid!important}}
-
-  .eg-name{font-weight:500;font-size:23px;color:#1f2a44;letter-spacing:.2px}
+  @media (max-width:991.98px){
+    .d-lg-block{display:none!important}.d-lg-none{display:inline-grid!important}
+    .eg-emma,.eg-genix{font-size:22px}
+  }
 
   /* Menu base */
   .eg-menu{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:6px}
@@ -153,20 +166,16 @@
   .eg-has-mega:focus-within .eg-mega{opacity:1;pointer-events:auto;transform:translate(-50%,0) scale(1)}
 
   .eg-mega-col{display:flex;flex-direction:column;gap:10px;min-width:0}
-  .eg-mega-title{
-    font-size:13px;letter-spacing:.5px;color:#002855;font-weight:600;text-transform:uppercase
-  }
+  .eg-mega-title{font-size:13px;letter-spacing:.5px;color:#002855;font-weight:600;text-transform:uppercase}
   .eg-mega-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 
-  /* --- Force navy blue for all service names --- */
+  /* Force navy blue for service names */
   .eg-mega-list a{
     text-decoration:none;color:#002855 !important;font-weight:400;font-size:16px;
     padding:6px 8px;border-radius:10px;border:1px solid transparent;
     transition:background .15s,border-color .15s,color .15s;
   }
-  .eg-mega-list a:hover{
-    background:#f0f6ff;border-color:#cdddf5;color:#001F3F !important;
-  }
+  .eg-mega-list a:hover{background:#f0f6ff;border-color:#cdddf5;color:#001F3F !important}
 
   /* Mobile sheet */
   .eg-mobile{display:none;position:absolute;top:100%;left:0;width:100%;background:#fff;
@@ -193,10 +202,7 @@
   .eg-m-acc.open .eg-m-mega{display:grid;grid-template-columns:1fr 1fr}
 
   /* Fixed header: stronger shadow + tighter padding when scrolled */
-  .eg-header.is-scrolled{
-    box-shadow:0 10px 24px rgba(15,23,42,.10);
-    padding:10px 0 !important;
-  }
+  .eg-header.is-scrolled{box-shadow:0 10px 24px rgba(15,23,42,.10);padding:10px 0 !important}
 </style>
 
 <script>
@@ -233,9 +239,7 @@
     spacer.id = 'eg-header-spacer';
     document.body.prepend(spacer);
 
-    function setSpacer(){
-      spacer.style.height = header.offsetHeight + 'px';
-    }
+    function setSpacer(){ spacer.style.height = header.offsetHeight + 'px'; }
     setSpacer();
     window.addEventListener('resize', setSpacer);
 

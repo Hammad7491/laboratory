@@ -5,12 +5,10 @@
     <!-- Brand + short blurb -->
     <div class="egf-col">
       <a href="{{ url('/') }}" class="egf-brand">
-        <span class="egf-logo">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M9 2h6v2h-1v5.6l4.8 4.8A4 4 0 0 1 17.6 20H6.4A4 4 0 0 1 3.2 14.4L8 9.6V4H9V2z" fill="currentColor"/>
-          </svg>
+        <img src="{{ asset('assets/images/logo.png') }}" alt="EmmaGenix logo" class="egf-logo-img">
+        <span class="egf-brand-name">
+          <span class="egf-emma">Emma</span><span class="egf-genix">Genix</span>
         </span>
-        <span class="egf-name">Emma<span>Genix</span></span>
       </a>
       <p class="egf-text">
         Mobile phlebotomy, testing, and wellness—delivered to your door with hospital-grade standards and friendly care.
@@ -87,7 +85,7 @@
 
 <style>
   .eg-footer{
-    background:#0a1b37; /* navy */
+    background:#0a1b37;
     color:#dbe6ff;
     padding-top:28px;
     font-family:'Poppins',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
@@ -96,32 +94,31 @@
     max-width:1200px; margin:0 auto; padding:0 18px 8px;
     display:grid; gap:22px; grid-template-columns:1.1fr .8fr .8fr 1fr;
   }
-  @media (max-width: 980px){
-    .egf-wrap{ grid-template-columns:1fr 1fr; }
-  }
-  @media (max-width: 560px){
-    .egf-wrap{ grid-template-columns:1fr; }
-  }
+  @media (max-width: 980px){ .egf-wrap{ grid-template-columns:1fr 1fr; } }
+  @media (max-width: 560px){ .egf-wrap{ grid-template-columns:1fr; } }
 
-  .egf-brand{ display:flex; align-items:center; gap:10px; text-decoration:none; color:#fff; }
-  .egf-logo{
-    display:grid; place-items:center; width:42px; height:42px; border-radius:12px;
-    background:linear-gradient(135deg,#00b894,#19c2ff);
-    box-shadow:0 10px 22px rgba(25,194,255,.25);
+  /* Brand */
+  .egf-brand{ display:flex; align-items:center; gap:12px; text-decoration:none; color:#fff; }
+  .egf-logo-img{
+    width:44px; height:44px; object-fit:contain; border-radius:10px; display:block;
+    box-shadow:0 8px 18px rgba(0,0,0,.12);
+    background:transparent;
   }
-  .egf-name{ font-weight:700; font-size:20px; letter-spacing:.2px; }
-  .egf-name span{ opacity:.95; }
+  .egf-brand-name{ display:inline-flex; align-items:center; gap:4px; line-height:1; }
+  .egf-emma{ font-weight:700; font-size:22px; letter-spacing:.2px;
+  background:linear-gradient(135deg,#00b894 0%, #00c2ff 100%); 
+-webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+  .egf-genix{
+    font-weight:700; font-size:22px; letter-spacing:.2px;
+    background:linear-gradient(135deg,#00b894 0%, #00c2ff 100%);
+    -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+  }
 
   .egf-text{ margin:10px 0 12px; color:#b9c7ec; font-size:14.5px; line-height:1.7; }
 
-  .egf-title{
-    margin:4px 0 10px; font-weight:700; font-size:15px; letter-spacing:.3px;
-    color:#ffffff;
-  }
+  .egf-title{ margin:4px 0 10px; font-weight:700; font-size:15px; letter-spacing:.3px; color:#ffffff; }
   .egf-list{ list-style:none; padding:0; margin:0; display:grid; gap:8px; }
-  .egf-list a{
-    color:#cfe0ff; text-decoration:none; font-size:14.5px;
-  }
+  .egf-list a{ color:#cfe0ff; text-decoration:none; font-size:14.5px; }
   .egf-list a:hover{ color:#ffffff; text-decoration:underline; }
 
   .egf-contact{ list-style:none; padding:0; margin:0; display:grid; gap:10px; }
@@ -154,7 +151,6 @@
   .egf-bottom a{ color:#cfe0ff; text-decoration:none; }
   .egf-bottom a:hover{ text-decoration:underline; }
   .egf-mini{ opacity:.9; }
-
 </style>
 
 <script>

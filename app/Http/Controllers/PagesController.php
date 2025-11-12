@@ -15,4 +15,9 @@ class PagesController extends Controller
     {
         return view('phlebotomy');
     }
+
+     public function covid()
+    {
+        return view('covid');
+    }
 }
