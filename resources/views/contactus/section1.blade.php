@@ -48,9 +48,10 @@
 
     <!-- Right: Form -->
     <div class="egc-card">
-      <h2 class="egc-h2">Send a message</h2>
+      <h2 class="egc-h2">Book Appointment</h2>
 
-      {{-- Success / error flash --}}
+      {{-- Optional server flashes if you ever post to backend --}}
+      {{-- 
       @if(session('status'))
         <div class="egc-alert success">{{ session('status') }}</div>
       @endif
@@ -64,8 +65,9 @@
           </ul>
         </div>
       @endif
+      --}}
 
-      <form class="egc-form" method="POST" action="" novalidate>
+      <form id="egcForm" class="egc-form" method="POST" action="" novalidate>
         @csrf
 
         <div class="egc-row">
@@ -80,9 +82,16 @@
           </div>
         </div>
 
-        <div class="egc-field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="you@example.com" required>
+        <div class="egc-row">
+          <div class="egc-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="you@example.com" required>
+          </div>
+
+          <div class="egc-field">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" value="{{ old('phone') }}" placeholder="+1 (___) ___-____" inputmode="tel" pattern="[\d\+\-\(\)\s]{7,}" required>
+          </div>
         </div>
 
         <div class="egc-field">
@@ -92,15 +101,26 @@
                  required>
         </div>
 
+        <div class="egc-field">
+          <label for="comment">Comment</label>
+          <textarea id="comment" name="comment" rows="4" placeholder="Share any details (address, preferred time window, physician order, lab kit info, etc.)">{{ old('comment') }}</textarea>
+        </div>
+
+        {{-- Honeypot (spam guard) --}}
+        <input type="text" name="hp_field" style="display:none" tabindex="-1" autocomplete="off" />
+
         <div class="egc-actions">
-          <button type="submit" class="egc-btn">Send Request</button>
+          <button id="egcSubmit" type="submit" class="egc-btn">Send Request</button>
           <p class="egc-mini">By submitting, you agree to our <a href="#">Privacy Policy</a>.</p>
         </div>
+
+        <!-- Status line for EmailJS feedback -->
+        <p id="egcStatus" style="margin-top:10px;font-weight:600;"></p>
       </form>
     </div>
   </div>
 
-  <!-- Map / reassurance band (optional visual) -->
+  <!-- Band -->
   <div class="egc-band">
     <div class="egc-wrap egc-band-inner">
       <h3>Mobile care—on your schedule.</h3>
@@ -140,13 +160,17 @@
   .egc-row{display:grid;gap:12px;grid-template-columns:1fr 1fr}
   .egc-field{display:grid;gap:6px}
   .egc-field label{font-size:13px;color:#24324a;font-weight:600}
-  .egc-field input{
+  .egc-field input,
+  .egc-field textarea{
     border-radius:12px;border:1px solid #d7e3ff;background:#f9fbff;outline:none;
-    padding:12px 14px;font:500 14.5px/1.3 Poppins,ui-sans-serif;color:#0f1f3a;
+    padding:12px 14px;font:500 14.5px/1.5 Poppins,ui-sans-serif;color:#0f1f3a;
     transition:border-color .15s, box-shadow .15s, background .15s;
   }
-  .egc-field input::placeholder{color:#7b8aab}
-  .egc-field input:focus{border-color:#7fb8ff;box-shadow:0 0 0 4px rgba(127,184,255,.25);background:#fff}
+  .egc-field textarea{min-height:120px;resize:vertical}
+  .egc-field input::placeholder,
+  .egc-field textarea::placeholder{color:#7b8aab}
+  .egc-field input:focus,
+  .egc-field textarea:focus{border-color:#7fb8ff;box-shadow:0 0 0 4px rgba(127,184,255,.25);background:#fff}
 
   .egc-actions{display:flex;align-items:center;gap:12px;margin-top:10px;flex-wrap:wrap}
   .egc-btn{
@@ -182,3 +206,85 @@
     .egc-hero img{height:300px}
   }
 </style>
+
+<!-- EmailJS (Browser SDK) -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+@verbatim
+<script>
+  // EmailJS configuration
+  const EMAILJS_PUBLIC_KEY  = "Vty8OfMFupURMn9_8";   // public key
+  const EMAILJS_SERVICE_ID  = "service_k6xlh9n";     // Gmail service
+  const EMAILJS_TEMPLATE_ID = "template_lx5r89k";    // Appointment template
+
+  // Initialize EmailJS
+  (function () {
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  })();
+
+  const $ = (s) => document.querySelector(s);
+  const setStatus = (msg, type = "info") => {
+    const el = $("#egcStatus");
+    if (!el) return;
+    el.textContent = msg;
+    el.style.color =
+      type === "success" ? "#0f5132" :
+      type === "error"   ? "#842029" :
+                           "#1f2a44";
+  };
+
+  $("#egcForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const btn  = $("#egcSubmit");
+
+    // Honeypot
+    if (form.hp_field && form.hp_field.value) {
+      setStatus("Blocked as spam.", "error");
+      return;
+    }
+
+    const params = {
+      first_name:   form.first_name.value.trim(),
+      last_name:    form.last_name.value.trim(),
+      email:        form.email.value.trim(),
+      phone:        form.phone.value.trim(),
+      need:         form.need.value.trim(),
+      comment:      form.comment.value.trim(),
+      submitted_at: new Date().toLocaleString(),
+      name: `${form.first_name.value.trim()} ${form.last_name.value.trim()}`.trim(),
+      message: form.comment.value.trim()
+    };
+
+    if (!params.first_name || !params.last_name || !params.email || !params.phone || !params.need) {
+      setStatus("Please fill in all required fields.", "error");
+      return;
+    }
+
+    try {
+      btn.disabled = true;
+      btn.style.opacity = 0.6;
+      setStatus("Sending...");
+
+      const res = await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params);
+
+      if (res.status === 200) {
+        setStatus("Appointment request sent successfully!", "success");
+        form.reset();
+      } else {
+        throw new Error("Unexpected EmailJS response: " + res.status);
+      }
+    } catch (err) {
+      console.error("EmailJS error:", err);
+      let extra = "";
+      if (err && err.text) extra = " (" + err.text + ")";
+      else if (err && err.message) extra = " (" + err.message + ")";
+      else if (err && err.status) extra = " (status " + err.status + ")";
+      setStatus("Failed to send. Please try again." + extra, "error");
+    } finally {
+      btn.disabled = false;
+      btn.style.opacity = 1;
+    }
+  });
+</script>
+@endverbatim
