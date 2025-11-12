@@ -48,8 +48,8 @@
               <ul class="eg-mega-list">
                 <li><a href="{{ route('drug') }}">Drug Test</a></li>
                 <li><a href="{{ route('dna') }}">DNA Test</a></li>
-                <li><a href="#">Live FingerPrint Screen</a></li>
-                <li><a href="#">IV Hydration</a></li>
+                <li><a href="{{ route('live') }}">Live FingerPrint Screen</a></li>
+                <li><a href="{{ route('hydration') }}">IV Hydration</a></li>
               </ul>
             </div>
           </div>

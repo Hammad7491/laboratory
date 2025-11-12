@@ -46,4 +46,14 @@ class PagesController extends Controller
     {
         return view('dna');
     }
+
+     public function live()
+    {
+        return view('live');
+    }
+
+    public function hydration()
+    {
+        return view('hydration');
+    }
 }

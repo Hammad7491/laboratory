@@ -28,3 +28,9 @@ Route::get('/phlebotomy', [PagesController::class, 'phlebotomy'])
 
         Route::get('/dna', [PagesController::class, 'dna'])
      ->name('dna');
+
+       Route::get('/live', [PagesController::class, 'live'])
+     ->name('live');
+
+        Route::get('/hydration', [PagesController::class, 'hydration'])
+     ->name('hydration');
