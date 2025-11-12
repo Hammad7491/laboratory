@@ -13,12 +13,12 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		<meta name="author" content="Jthemes"/>	
-		<meta name="description" content="Treko - Software & Startup Premium Landing Page Template"/>
-		<meta name="keywords" content="Responsive, HTML5 Template, Jthemes, Landing, Startup, Software, Business, Company, Creative, Freelancers">	
+		<meta name="description" content="EmmaGenix provides professional mobile phlebotomy, lab testing, DNA and drug screening, IV hydration, and healthcare services — delivered directly to your home, office, or care facility with compassion, accuracy, and professionalism.">
+		<meta name="keywords" content="EmmaGenix, mobile phlebotomy, blood draw, lab testing, DNA test, COVID test, background check, IV hydration, pre-employment verification, healthcare, home sample collection, medical services, nursing home care, home healthcare, diagnostic services">	
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 				
   		<!-- SITE TITLE -->
-		<title>Treko - Software & Startup Premium Landing Page Template</title>
+		<title>EmmaGenix — Mobile Phlebotomy, Lab Testing & Home Health Services</title>
 							<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 <!-- Animate.css for flip animations -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />

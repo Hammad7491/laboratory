@@ -34,3 +34,11 @@ Route::get('/phlebotomy', [PagesController::class, 'phlebotomy'])
 
         Route::get('/hydration', [PagesController::class, 'hydration'])
      ->name('hydration');
+
+
+       Route::get('/aboutus', [PagesController::class, 'aboutus'])
+     ->name('aboutus');
+
+
+      Route::get('/contactus', [PagesController::class, 'contactus'])
+     ->name('contactus');

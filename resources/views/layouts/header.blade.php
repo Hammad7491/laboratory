@@ -56,8 +56,8 @@
         </li>
 
         <li><a href="#locations" class="eg-link">Locations</a></li>
-        <li><a href="#about" class="eg-link">About Us</a></li>
-        <li><a href="#contact" class="eg-link eg-cta">Contact Us</a></li>
+        <li><a href="{{ route('aboutus') }}" class="eg-link">About Us</a></li>
+        <li><a href="{{ route('contactus') }}" class="eg-link eg-cta">Contact Us</a></li>
       </ul>
     </nav>
   </div>
@@ -108,94 +108,70 @@
   html,body{max-width:100%;overflow-x:hidden}
 
   /* Brand styles */
-  .eg-logo{
-    width:42px;height:42px;object-fit:contain;border-radius:10px;display:block;
-    box-shadow:0 8px 18px rgba(0,0,0,.06);
-  }
+  .eg-logo{width:42px;height:42px;object-fit:contain;border-radius:10px;display:block;box-shadow:0 8px 18px rgba(0,0,0,.06);}
   .eg-brand-name{display:inline-flex;align-items:center;gap:4px;line-height:1}
   .eg-emma{font-weight:700;font-size:24px;color:#001F3F;letter-spacing:.2px}
-  .eg-genix{
-    font-weight:700;font-size:24px;letter-spacing:.2px;
-    background:linear-gradient(135deg,#00b894 0%, #00c2ff 100%);
-    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-  }
+  .eg-genix{font-weight:700;font-size:24px;letter-spacing:.2px;background:linear-gradient(135deg,#00b894 0%, #00c2ff 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
 
   /* Desktop show/hide helpers */
   @media (min-width:992px){.d-lg-block{display:block!important}.d-lg-none{display:none!important}}
-  @media (max-width:991.98px){
-    .d-lg-block{display:none!important}.d-lg-none{display:inline-grid!important}
-    .eg-emma,.eg-genix{font-size:22px}
-  }
+  @media (max-width:991.98px){.d-lg-block{display:none!important}.d-lg-none{display:inline-grid!important}.eg-emma,.eg-genix{font-size:22px}}
 
   /* Menu base */
   .eg-menu{list-style:none;margin:0;padding:0;display:flex;align-items:center;gap:6px}
-  .eg-link{
-    text-decoration:none;color:#26334f;font-weight:500;font-size:15.5px;
-    padding:10px 14px;border-radius:12px;display:inline-flex;align-items:center;gap:8px;
-    transition:background-color .2s,color .2s,box-shadow .2s,transform .06s;
-  }
-  .eg-link:hover{color:#002855;background:linear-gradient(180deg,#e6f0ff,#f4f8ff);box-shadow:0 6px 16px rgba(0,40,85,.12)}
+  .eg-link{ text-decoration:none;color:#26334f;font-weight:500;font-size:15.5px;padding:10px 14px;border-radius:12px;display:inline-flex;align-items:center;gap:8px;transition:background-color .2s,color .2s,box-shadow .2s,transform .06s; }
+  .eg-link:hover{ color:#002855; background:linear-gradient(180deg,#e6f0ff,#f4f8ff); box-shadow:0 6px 16px rgba(0,40,85,.12); }
 
-  /* CTA button */
-  .eg-cta{
-    background:linear-gradient(135deg,#001F3F,#00509E);
-    color:#fff!important;border:1px solid rgba(255,255,255,.45);
-    box-shadow:0 10px 22px rgba(0,40,85,.28)
+  /* CONTACT US button — force static navy in ALL states (override .eg-link:hover) */
+  .eg-link.eg-cta,
+  .eg-link.eg-cta:hover,
+  .eg-link.eg-cta:focus,
+  .eg-link.eg-cta:active,
+  .eg-link.eg-cta:visited{
+    background:#001F3F !important;
+    color:#fff !important;
+    border:1px solid transparent !important;
+    box-shadow:0 8px 20px rgba(0,40,85,.20) !important;
+    transform:none !important;
+    filter:none !important;
   }
-  .eg-cta:hover{filter:saturate(115%);transform:translateY(-1px);box-shadow:0 12px 26px rgba(0,40,85,.35)}
 
   /* Mega dropdown — navy theme */
   .eg-has-mega{position:relative}
   .eg-caret{transition:transform .18s ease}
   .eg-has-mega:hover .eg-caret{transform:rotate(180deg)}
-
   .eg-has-mega .eg-mega{
-    position:absolute;
-    left:50%; top:calc(100% + 8px);
-    transform:translate(-50%,8px) scale(.98);
-    background:#fff;border:1px solid rgba(15,23,42,.06);
-    border-radius:18px;box-shadow:0 22px 46px rgba(15,23,42,.12);
-    padding:18px;
-    width:clamp(560px, 70vw, 980px);
-    max-width:calc(100vw - 32px);
-    display:grid;grid-template-columns:1fr 1fr;gap:28px;
-    opacity:0;pointer-events:none;transition:opacity .15s, transform .15s;
+    position:absolute;left:50%;top:calc(100% + 8px);transform:translate(-50%,8px) scale(.98);
+    background:#fff;border:1px solid rgba(15,23,42,.06);border-radius:18px;box-shadow:0 22px 46px rgba(15,23,42,.12);
+    padding:18px;width:clamp(560px, 70vw, 980px);max-width:calc(100vw - 32px);
+    display:grid;grid-template-columns:1fr 1fr;gap:28px;opacity:0;pointer-events:none;transition:opacity .15s, transform .15s;
   }
   .eg-has-mega .eg-mega::before{content:"";position:absolute;left:0;right:0;top:-12px;height:14px}
-  .eg-has-mega:hover .eg-mega,
-  .eg-has-mega:focus-within .eg-mega{opacity:1;pointer-events:auto;transform:translate(-50%,0) scale(1)}
+  .eg-has-mega:hover .eg-mega, .eg-has-mega:focus-within .eg-mega{opacity:1;pointer-events:auto;transform:translate(-50%,0) scale(1)}
 
   .eg-mega-col{display:flex;flex-direction:column;gap:10px;min-width:0}
   .eg-mega-title{font-size:13px;letter-spacing:.5px;color:#002855;font-weight:600;text-transform:uppercase}
   .eg-mega-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
-
-  /* Force navy blue for service names */
-  .eg-mega-list a{
-    text-decoration:none;color:#002855 !important;font-weight:400;font-size:16px;
-    padding:6px 8px;border-radius:10px;border:1px solid transparent;
-    transition:background .15s,border-color .15s,color .15s;
-  }
-  .eg-mega-list a:hover{background:#f0f6ff;border-color:#cdddf5;color:#001F3F !important}
+  .eg-mega-list a{ text-decoration:none;color:#002855 !important;font-weight:400;font-size:16px;padding:6px 8px;border-radius:10px;border:1px solid transparent;transition:background .15s,border-color .15s,color .15s; }
+  .eg-mega-list a:hover{ background:#f0f6ff;border-color:#cdddf5;color:#001F3F !important; }
 
   /* Mobile sheet */
-  .eg-mobile{display:none;position:absolute;top:100%;left:0;width:100%;background:#fff;
-    border-top:1px solid rgba(2,6,23,.06);box-shadow:0 16px 36px rgba(2,6,23,.1)}
+  .eg-mobile{display:none;position:absolute;top:100%;left:0;width:100%;background:#fff;border-top:1px solid rgba(2,6,23,.06);box-shadow:0 16px 36px rgba(2,6,23,.1)}
   .eg-mobile.show{display:block}
   .eg-m-list{list-style:none;margin:0;padding:14px}
   .eg-m-list>li{margin:8px 0}
-  .eg-mobile a{display:block;padding:14px 12px;border-radius:12px;text-decoration:none;font-weight:400;color:#22304a;
-    border:1px solid rgba(2,6,23,.06);background:#fff}
+  .eg-mobile a{display:block;padding:14px 12px;border-radius:12px;text-decoration:none;font-weight:400;color:#22304a;border:1px solid rgba(2,6,23,.06);background:#fff}
   .eg-mobile a:hover{background:#f0f6ff;color:#002855}
-  .eg-m-cta{
-    background:linear-gradient(135deg,#001F3F,#00509E)!important;
-    color:#fff!important;border-color:transparent!important;
-    box-shadow:0 10px 22px rgba(0,40,85,.25)
+
+  .eg-m-cta,
+  .eg-m-cta:hover,
+  .eg-m-cta:focus,
+  .eg-m-cta:active{
+    background:#001F3F!important;color:#fff!important;border:none!important;
+    box-shadow:0 8px 20px rgba(0,40,85,.20)!important;transform:none!important;filter:none!important;
   }
-  .eg-m-acc-btn{
-    width:100%;display:flex;justify-content:space-between;align-items:center;
-    padding:14px 12px;border-radius:12px;font-weight:500;border:1px solid rgba(2,6,23,.06);
-    background:#fff;color:#22304a;cursor:pointer;
-  }
+
+  .eg-m-acc-btn{width:100%;display:flex;justify-content:space-between;align-items:center;padding:14px 12px;border-radius:12px;font-weight:500;border:1px solid rgba(2,6,23,.06);background:#fff;color:#22304a;cursor:pointer;}
   .eg-m-mega{display:none;gap:10px;margin-top:8px;border-left:3px solid #c9daf7;padding:8px 10px}
   .eg-m-mega-col{display:flex;flex-direction:column;gap:6px}
   .eg-m-mega-title{font-size:12px;color:#002855;font-weight:600}
@@ -232,21 +208,16 @@
     holder.addEventListener('mouseleave', ()=> trigger.setAttribute('aria-expanded','false'));
   })();
 
-  // Fixed header spacer to prevent content jump + scrolled state
+  // Spacer + scrolled state
   (function(){
     const header = document.querySelector('.eg-header');
     const spacer = document.createElement('div');
     spacer.id = 'eg-header-spacer';
     document.body.prepend(spacer);
-
     function setSpacer(){ spacer.style.height = header.offsetHeight + 'px'; }
     setSpacer();
     window.addEventListener('resize', setSpacer);
-
-    function onScroll(){
-      if(window.scrollY > 8){ header.classList.add('is-scrolled'); }
-      else { header.classList.remove('is-scrolled'); }
-    }
+    function onScroll(){ if(window.scrollY > 8){ header.classList.add('is-scrolled'); } else { header.classList.remove('is-scrolled'); } }
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
   })();

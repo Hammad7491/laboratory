@@ -56,4 +56,18 @@ class PagesController extends Controller
     {
         return view('hydration');
     }
+
+
+    public function aboutus()
+    {
+        return view('aboutus');
+    }
+
+    public function contactus()
+    {
+        return view('contactus');
+    }
+
+
+    
 }
