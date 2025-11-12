@@ -2,15 +2,18 @@
 <section class="eg-services" style="padding:42px 0; font-family:'Poppins',ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;">
   <div style="max-width:1200px;margin:0 auto;padding:0 18px;">
 
-    <!-- Section Heading -->
+    <!-- Section Heading (dual color: navy + gradient green) -->
     <header style="text-align:center;margin-bottom:28px;">
-      <h2 style="margin:0 0 6px 0;font-weight:600;font-size:clamp(22px,3.6vw,34px);letter-spacing:.02em;color:#001F3F;">
-        Convenience Testing &amp; Wellness Services
+      <h2 style="margin:0 0 6px 0;font-weight:700;font-size:clamp(22px,3.6vw,34px);letter-spacing:.02em;">
+        <span style="color:#001F3F;">Convenience Testing</span>
+        <span style="background:linear-gradient(135deg,#00b894,#00cec9);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">
+          &amp; Wellness Services
+        </span>
       </h2>
       <p style="margin:0;color:#51607a;font-size:15px;">
         On-demand lab testing and wellness care—delivered with hospital-grade standards.
       </p>
-      <div style="width:82px;height:4px;margin:14px auto 0;border-radius:999px;background:linear-gradient(135deg,#001F3F,#00509E);"></div>
+      <div style="width:92px;height:4px;margin:14px auto 0;border-radius:999px;background:linear-gradient(135deg,#001F3F,#00b894);"></div>
     </header>
 
     <!-- Cards -->
@@ -18,8 +21,8 @@
       <!-- Phlebotomy -->
       <article class="eg-card">
         <figure class="eg-card-img">
-          <img src="https://images.pexels.com/photos/8460152/pexels-photo-8460152.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-               alt="Mobile Phlebotomy" loading="lazy">
+          <img src="https://images.pexels.com/photos/6129682/pexels-photo-6129682.jpeg?auto=compress&cs=tinysrgb&w=1200"
+               alt="Phlebotomy blood draw at home" loading="lazy">
         </figure>
         <h3 class="eg-card-title">
           <a href="{{ route('phlebotomy') }}">Phlebotomy</a>
@@ -32,8 +35,8 @@
       <!-- IV Hydration -->
       <article class="eg-card">
         <figure class="eg-card-img">
-          <img src="https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-               alt="IV Hydration" loading="lazy">
+          <img src="https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?auto=compress&cs=tinysrgb&w=1200"
+               alt="IV hydration therapy" loading="lazy">
         </figure>
         <h3 class="eg-card-title"><a href="#">IV Hydration</a></h3>
         <p class="eg-card-text">
@@ -44,8 +47,8 @@
       <!-- Micronutrients -->
       <article class="eg-card">
         <figure class="eg-card-img">
-          <img src="https://images.pexels.com/photos/3844586/pexels-photo-3844586.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-               alt="Micronutrients" loading="lazy">
+          <img src="https://images.pexels.com/photos/3844586/pexels-photo-3844586.jpeg?auto=compress&cs=tinysrgb&w=1200"
+               alt="Micronutrient therapy" loading="lazy">
         </figure>
         <h3 class="eg-card-title"><a href="#">Micronutrients</a></h3>
         <p class="eg-card-text">
@@ -53,23 +56,23 @@
         </p>
       </article>
 
-      <!-- Drug Test -->
+      <!-- ✅ Drug Test (fixed and accurate medical image) -->
       <article class="eg-card">
         <figure class="eg-card-img">
-          <img src="https://images.pexels.com/photos/8442460/pexels-photo-8442460.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-               alt="Drug Testing" loading="lazy">
+          <img src="{{ asset('assets/images/drug.png') }}" 
+               alt="Urine drug test sample cup" loading="lazy">
         </figure>
         <h3 class="eg-card-title"><a href="#">Drug Test</a></h3>
         <p class="eg-card-text">
-          Rapid and lab-confirmed screenings for pre-employment, compliance, and workplace safety—scheduled on-site or mobile.
+          Reliable urine and lab-based screenings for pre-employment, compliance, or random drug testing. Fast, confidential, and certified collection.
         </p>
       </article>
 
       <!-- DNA Test -->
       <article class="eg-card">
         <figure class="eg-card-img">
-          <img src="https://images.pexels.com/photos/3825529/pexels-photo-3825529.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-               alt="DNA Testing" loading="lazy">
+          <img src="https://images.pexels.com/photos/3825529/pexels-photo-3825529.jpeg?auto=compress&cs=tinysrgb&w=1200"
+               alt="DNA analysis in laboratory" loading="lazy">
         </figure>
         <h3 class="eg-card-title"><a href="#">DNA Test</a></h3>
         <p class="eg-card-text">
@@ -80,8 +83,8 @@
       <!-- Covid-19 Test -->
       <article class="eg-card">
         <figure class="eg-card-img">
-          <img src="https://images.pexels.com/photos/3825528/pexels-photo-3825528.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-               alt="COVID-19 Testing" loading="lazy">
+          <img src="https://images.pexels.com/photos/3825528/pexels-photo-3825528.jpeg?auto=compress&cs=tinysrgb&w=1200"
+               alt="Covid-19 test collection" loading="lazy">
         </figure>
         <h3 class="eg-card-title"><a href="#">Covid-19 Test</a></h3>
         <p class="eg-card-text">
@@ -92,8 +95,8 @@
       <!-- Background Check -->
       <article class="eg-card">
         <figure class="eg-card-img">
-          <img src="https://images.pexels.com/photos/7735770/pexels-photo-7735770.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-               alt="Background Check" loading="lazy">
+          <img src="https://images.pexels.com/photos/7735770/pexels-photo-7735770.jpeg?auto=compress&cs=tinysrgb&w=1200"
+               alt="Background check identity verification" loading="lazy">
         </figure>
         <h3 class="eg-card-title"><a href="#">Background Check</a></h3>
         <p class="eg-card-text">
@@ -104,8 +107,8 @@
       <!-- Pre-employment Verification -->
       <article class="eg-card">
         <figure class="eg-card-img">
-          <img src="https://images.pexels.com/photos/7735673/pexels-photo-7735673.jpeg?auto=compress&cs=tinysrgb&w=1200" 
-               alt="Pre-employment Verification" loading="lazy">
+          <img src="{{ asset('assets/images/pre.png') }}" 
+               alt="Pre-employment document signing" loading="lazy">
         </figure>
         <h3 class="eg-card-title"><a href="#">Pre-employment Verification</a></h3>
         <p class="eg-card-text">
@@ -138,7 +141,7 @@
   }
   .eg-card:hover{
     transform:translateY(-3px);
-    border-color:#cdddf5;
+    border-color:#b7e4d8;
     box-shadow:0 18px 36px rgba(0,40,85,.12);
   }
 
@@ -146,16 +149,17 @@
     margin:0 0 10px 0; border-radius:10px; overflow:hidden;
     aspect-ratio: 16 / 10; background:#f6f8fc;
   }
-  .eg-card-img img{ width:100%; height:100%; object-fit:cover; display:block; }
+  .eg-card-img img{ width:100%; height:100%; object-fit:cover; display:block; transition:transform .3s ease; }
+  .eg-card:hover img{ transform:scale(1.05); }
 
   .eg-card-title{
     margin:8px 0 6px; text-align:center;
-    font-size:clamp(16px,2.2vw,20px); line-height:1.25; font-weight:700;
+    font-size:clamp(16px,2.2vw,20px); line-height:1.25; font-weight:800;
     letter-spacing:.02em;
   }
   .eg-card-title a{
-    color:#001F3F; text-decoration:none;
-    background:linear-gradient(90deg,#001F3F,#00509E);
+    text-decoration:none;
+    background:linear-gradient(90deg,#001F3F,#00b894);
     -webkit-background-clip:text; -webkit-text-fill-color:transparent;
   }
   .eg-card-text{
