@@ -1,15 +1,12 @@
 <!-- PHLEBOTOMY PAGE: HERO + CONTENT -->
-<section class="svc-phleb" style="padding-top:18px;">
+<section class="svc-phleb" style="padding-top:18px; font-family:'Poppins',sans-serif;">
   <!-- Top/Hero -->
-  <div class="svc-hero" style="
-      position:relative; overflow:hidden; border-radius:18px; max-width:1100px; margin:0 auto 28px; ">
-   <img src="{{ asset('assets/images/p2.png') }}" 
+  <div class="svc-hero" style="position:relative; overflow:hidden; border-radius:18px; max-width:1100px; margin:0 auto 28px;">
+    <img src="{{ asset('assets/images/p2.png') }}" 
          alt="Mobile phlebotomy professional drawing blood at home"
          style="width:100%; height:420px; object-fit:cover; filter:saturate(104%); display:block;">
-    <div class="svc-hero-overlay" style="
-        position:absolute; inset:0; background:linear-gradient(180deg,rgba(10,18,36,.55),rgba(10,18,36,.55));"></div>
-    <div class="svc-hero-text" style="
-        position:absolute; inset:0; display:grid; place-items:center; text-align:center; color:#fff; padding:24px;">
+    <div class="svc-hero-overlay" style="position:absolute; inset:0; background:linear-gradient(180deg,rgba(10,18,36,.55),rgba(10,18,36,.55));"></div>
+    <div class="svc-hero-text" style="position:absolute; inset:0; display:grid; place-items:center; text-align:center; color:#fff; padding:24px;">
       <div>
         <p style="margin:0 0 6px 0; letter-spacing:.25em; text-transform:uppercase; font:500 13px/1.2 Poppins, sans-serif;">
           EmmaGenix Services
@@ -29,7 +26,14 @@
   <div class="svc-container" style="max-width:1100px; margin:0 auto; padding:0 16px;">
     <div class="svc-intro" style="display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:start;">
       <div>
-        <h2 style="font:500 26px/1.25 Poppins, sans-serif; color:#0f1f3a; margin:0 0 10px;">Mobile Phlebotomy, On Your Schedule</h2>
+        <!-- Dual-color heading -->
+        <h2 style="font:500 26px/1.25 Poppins, sans-serif; margin:0 0 10px;">
+          <span style="color:#000;">Mobile Phlebotomy,</span>
+          <span style="background:linear-gradient(135deg,#00c291,#00b0b9); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
+            On Your Schedule
+          </span>
+        </h2>
+
         <p style="font:400 16px/1.8 Poppins, sans-serif; color:#24324a; margin:0 0 12px;">
           Our Mobile Phlebotomy Service brings professional, reliable blood draw services directly to your home, workplace, or
           healthcare facility. No long lines, no rushing across town, no added stress—we come to you with everything needed for a
@@ -42,19 +46,19 @@
         </p>
         <ul style="list-style:none; padding:0; margin:16px 0 0; display:grid; gap:10px;">
           <li style="display:flex; gap:10px; align-items:flex-start;">
-            <span style="width:10px; height:10px; border-radius:50%; background:linear-gradient(135deg,#06b6d4,#7c3aed); margin-top:8px;"></span>
+            <span style="width:10px; height:10px; border-radius:50%; background:linear-gradient(135deg,#001F3F,#00509E); margin-top:8px;"></span>
             <span style="font:400 15.5px/1.7 Poppins, sans-serif; color:#1a2644;">
               Pediatric, adult, and senior-friendly care with gentle techniques and extra time for comfort.
             </span>
           </li>
           <li style="display:flex; gap:10px; align-items:flex-start;">
-            <span style="width:10px; height:10px; border-radius:50%; background:linear-gradient(135deg,#06b6d4,#7c3aed); margin-top:8px;"></span>
+            <span style="width:10px; height:10px; border-radius:50%; background:linear-gradient(135deg,#001F3F,#00509E); margin-top:8px;"></span>
             <span style="font:400 15.5px/1.7 Poppins, sans-serif; color:#1a2644;">
               Routine blood work, physician-ordered panels, and wellness testing (fasting or non-fasting).
             </span>
           </li>
           <li style="display:flex; gap:10px; align-items:flex-start;">
-            <span style="width:10px; height:10px; border-radius:50%; background:linear-gradient(135deg,#06b6d4,#7c3aed); margin-top:8px;"></span>
+            <span style="width:10px; height:10px; border-radius:50%; background:linear-gradient(135deg,#001F3F,#00509E); margin-top:8px;"></span>
             <span style="font:400 15.5px/1.7 Poppins, sans-serif; color:#1a2644;">
               Lab test collections and courier drop-off to Quest, LabCorp, &amp; more—paperwork handled for you.
             </span>
@@ -63,9 +67,7 @@
       </div>
 
       <!-- Side card -->
-      <aside class="svc-side" style="
-          background:#fff; border:1px solid rgba(2,6,23,.06); border-radius:14px; padding:18px;
-          box-shadow:0 10px 24px rgba(2,6,23,.06);">
+      <aside class="svc-side" style="background:#fff; border:1px solid rgba(2,6,23,.06); border-radius:14px; padding:18px; box-shadow:0 10px 24px rgba(2,6,23,.06);">
         <h3 style="font:500 18px/1.4 Poppins, sans-serif; color:#0f1f3a; margin:0 0 8px;">What to Expect</h3>
         <ol style="margin:0; padding-left:18px; font:400 14.5px/1.8 Poppins, sans-serif; color:#23304a;">
           <li>Book a time window that works for you.</li>
@@ -76,8 +78,9 @@
         </ol>
         <a href="#book" style="
             display:inline-block; margin-top:12px; padding:12px 16px; border-radius:10px;
-            background:linear-gradient(135deg,#06b6d4,#7c3aed); color:#fff; text-decoration:none; font:500 14.5px/1 Poppins, sans-serif;
-            box-shadow:0 12px 22px rgba(124,58,237,.25);">Book Mobile Draw</a>
+            background:linear-gradient(135deg,#001F3F,#00509E); color:#fff; text-decoration:none;
+            font:500 14.5px/1 Poppins, sans-serif; box-shadow:0 12px 22px rgba(0,40,85,.25);
+            transition:filter .2s, transform .1s;">Book Mobile Draw</a>
       </aside>
     </div>
   </div>
@@ -86,11 +89,11 @@
   <div class="svc-gallery" style="max-width:1100px; margin:26px auto 6px; padding:0 16px;">
     <div style="display:grid; gap:14px; grid-template-columns:1fr 1fr 1fr;">
       <figure style="margin:0; border-radius:14px; overflow:hidden; border:1px solid rgba(2,6,23,.06); box-shadow:0 8px 18px rgba(2,6,23,.06);">
-        <img src="{{ asset('assets/images/p1.png') }}"  alt="At-home blood draw" style="width:100%; height:220px; object-fit:cover;">
+        <img src="{{ asset('assets/images/p1.png') }}" alt="At-home blood draw" style="width:100%; height:220px; object-fit:cover;">
         <figcaption style="padding:10px 12px; font:400 14px/1.6 Poppins, sans-serif; color:#334155;">At-home convenience with clinical standards.</figcaption>
       </figure>
       <figure style="margin:0; border-radius:14px; overflow:hidden; border:1px solid rgba(2,6,23,.06); box-shadow:0 8px 18px rgba(2,6,23,.06);">
-       <img src="{{ asset('assets/images/p3.png') }}" alt="Sample kits and labeling" style="width:100%; height:220px; object-fit:cover;">
+        <img src="{{ asset('assets/images/p3.png') }}" alt="Sample kits and labeling" style="width:100%; height:220px; object-fit:cover;">
         <figcaption style="padding:10px 12px; font:400 14px/1.6 Poppins, sans-serif; color:#334155;">Secure labeling and tracked transport to your lab.</figcaption>
       </figure>
       <figure style="margin:0; border-radius:14px; overflow:hidden; border:1px solid rgba(2,6,23,.06); box-shadow:0 8px 18px rgba(2,6,23,.06);">
@@ -100,7 +103,7 @@
     </div>
   </div>
 
-  <!-- Simple FAQs (optional, expandable feel without JS) -->
+  <!-- Simple FAQs -->
   <div class="svc-faq" style="max-width:980px; margin:20px auto 0; padding:0 16px;">
     <details style="background:#fff;border:1px solid rgba(2,6,23,.08);border-radius:12px;padding:14px 16px;margin-bottom:10px;">
       <summary style="cursor:pointer; font:500 15px/1.5 Poppins, sans-serif; color:#0f1f3a;">Do I need a doctor’s order?</summary>
@@ -126,8 +129,8 @@
   <div class="svc-cta" style="max-width:980px; margin:20px auto 36px; padding:0 16px; text-align:center;">
     <a href="#book" style="
         display:inline-block; padding:14px 22px; border-radius:12px;
-        background:linear-gradient(135deg,#06b6d4,#7c3aed); color:#fff; text-decoration:none;
-        font:500 16px/1 Poppins, sans-serif; box-shadow:0 14px 28px rgba(124,58,237,.28);
+        background:linear-gradient(135deg,#001F3F,#00509E); color:#fff; text-decoration:none;
+        font:500 16px/1 Poppins, sans-serif; box-shadow:0 14px 28px rgba(0,40,85,.28);
         transition:transform .12s ease, filter .2s ease;">Schedule a Mobile Blood Draw</a>
   </div>
 </section>
