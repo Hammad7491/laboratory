@@ -55,7 +55,7 @@
           </div>
         </li>
 
-        <li><a href="#locations" class="eg-link">Locations</a></li>
+        <li><a href="{{ route('location') }}" class="eg-link">Locations</a></li>
         <li><a href="{{ route('aboutus') }}" class="eg-link">About Us</a></li>
         <li><a href="{{ route('contactus') }}" class="eg-link eg-cta">Contact Us</a></li>
       </ul>

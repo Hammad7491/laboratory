@@ -68,6 +68,11 @@ class PagesController extends Controller
         return view('contactus');
     }
 
+    public function location()
+    {
+        return view('location');
+    }
+
 
     
 }

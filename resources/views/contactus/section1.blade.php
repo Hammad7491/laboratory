@@ -5,8 +5,8 @@
   <!-- HERO -->
   <div class="egc-hero">
     <img
-      src="https://images.pexels.com/photos/8460152/pexels-photo-8460152.jpeg?auto=compress&cs=tinysrgb&w=1920"
-      alt="Clinician preparing supplies for patient visit">
+      src="https://images.pexels.com/photos/8460035/pexels-photo-8460035.jpeg?auto=compress&cs=tinysrgb&w=1920"
+      alt="Phlebotomist handling blood sample tubes in a medical lab">
     <div class="egc-hero-overlay"></div>
 
     <div class="egc-hero-inner">

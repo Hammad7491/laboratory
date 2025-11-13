@@ -42,3 +42,8 @@ Route::get('/phlebotomy', [PagesController::class, 'phlebotomy'])
 
       Route::get('/contactus', [PagesController::class, 'contactus'])
      ->name('contactus');
+
+
+
+      Route::get('/location', [PagesController::class, 'location'])
+     ->name('location');
