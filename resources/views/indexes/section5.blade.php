@@ -5,8 +5,10 @@
 
     <header class="eg-home-header">
       <p class="eg-home-kicker">SERVICE AREAS</p>
+
       <h2 class="eg-home-title">
-        Everything You Need to Know About Our Coverage
+        Everything You Need to Know 
+        <span class="eg-highlight">About Our Coverage</span>
       </h2>
     </header>
 
@@ -60,7 +62,8 @@
 
 <style>
   .eg-home-states{
-    --navy:#001F3F;   /* LOGO COLOR */
+    --navy:#001F3F;       /* logo color */
+    --teal:#00c2b3;       /* highlight color */
     --muted:#6b7693;
     font-family:'Poppins',ui-sans-serif,system-ui;
     padding:40px 0 46px;
@@ -77,6 +80,7 @@
     text-align:center;
     margin-bottom:26px;
   }
+
   .eg-home-kicker{
     text-transform:uppercase;
     letter-spacing:.26em;
@@ -85,11 +89,17 @@
     color:#7a86a8;
     margin-bottom:6px;
   }
+
+  /* Dual colored main heading */
   .eg-home-title{
     margin:0;
     font-size:clamp(24px,4vw,30px);
     font-weight:800;
-    color:#111827;
+    color:#0a1b2e;  /* dark navy */
+  }
+
+  .eg-home-title .eg-highlight{
+    color:var(--teal);   /* teal highlight */
   }
 
   .eg-home-grid{
@@ -124,7 +134,6 @@
     pointer-events:none;
   }
 
-  /* 01,02,03 navy blue */
   .eg-home-step{
     font-size:30px;
     font-weight:800;
@@ -149,7 +158,7 @@
     flex:1 1 auto;
   }
 
-  /* BUTTON COLOR NAVY BLUE */
+  /* Button navy blue */
   .eg-home-card-btn{
     align-self:flex-start;
     padding:8px 18px;
