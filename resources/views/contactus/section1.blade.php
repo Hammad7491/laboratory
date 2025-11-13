@@ -26,16 +26,28 @@
 
       <ul class="egc-list">
         <li>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15v4a2 2 0 0 1-2 2c-9.94 0-18-8.06-18-18a2 2 0 0 1 2-2h4l2 5-3 2a14 14 0 0 0 6 6l2-3 5 2z"/></svg>
-          (000) 123-4567
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 15v4a2 2 0 0 1-2 2c-9.94 0-18-8.06-18-18a2 2 0 0 1 2-2h4l2 5-3 2a14 14 0 0 0 6 6l2-3 5 2z"/>
+          </svg>
+          201-688-0338
         </li>
         <li>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a2 2 0 0 1 2 2v1l-10 6L2 7V6a2 2 0 0 1 2-2Zm18 6.6V18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.4l10 6 10-6Z"/></svg>
-          hello@emmagenix.com
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M4 4h16a2 2 0 0 1 2 2v1l-10 6L2 7V6a2 2 0 0 1 2-2Zm18 6.6V18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.4l10 6 10-6Z"/>
+          </svg>
+          info@emmagenix.com
         </li>
-        <li>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a9 9 0 0 0-9 9c0 6 9 11 9 11s9-5 9-11a9 9 0 0 0-9-9zm0 12.5a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7z"/></svg>
-          West Orange, NJ
+        <li class="egc-hours">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm0 2a8 8 0 1 1 0 16A8 8 0 0 1 12 4Zm-1 2h2v5.17l3.12 3.11-1.42 1.42L11 12.59V6Z"/>
+          </svg>
+          <div>
+            <div class="egc-hours-title">Business Hours</div>
+            <div class="egc-hours-text">
+              Mon – Fri: 8:30 am – 5:30 pm<br>
+              Saturday: 8:30 am – 2:30 pm
+            </div>
+          </div>
         </li>
       </ul>
 
@@ -51,7 +63,7 @@
       <h2 class="egc-h2">Book Appointment</h2>
 
       {{-- Optional server flashes if you ever post to backend --}}
-      {{-- 
+      {{--
       @if(session('status'))
         <div class="egc-alert success">{{ session('status') }}</div>
       @endif
@@ -96,9 +108,18 @@
 
         <div class="egc-field">
           <label for="need">Which type of service do you need?</label>
-          <input type="text" id="need" name="need" value="{{ old('need') }}"
-                 placeholder="e.g., Mobile phlebotomy tomorrow 10–12, DNA paternity test, IV hydration…"
-                 required>
+          <select id="need" name="need" required>
+            <option value="" disabled selected>Select a service</option>
+            <option value="Phlebotomy">Phlebotomy</option>
+            <option value="Covid-19 Test">Covid-19 Test</option>
+            <option value="Background Check">Background Check</option>
+            <option value="Pre-vital Sign Check">Pre-vital Sign Check</option>
+            <option value="Pre-employment Verification">Pre-employment Verification</option>
+            <option value="Drug Test">Drug Test</option>
+            <option value="DNA Test">DNA Test</option>
+            <option value="Live FingerPrint Screen">Live FingerPrint Screen</option>
+            <option value="IV Hydration">IV Hydration</option>
+          </select>
         </div>
 
         <div class="egc-field">
@@ -152,6 +173,10 @@
   /* Info list */
   .egc-list{list-style:none;margin:12px 0;padding:0;display:grid;gap:10px}
   .egc-list li{display:flex;align-items:center;gap:8px;color:#213150}
+  .egc-hours{align-items:flex-start}
+  .egc-hours-title{font-weight:600;font-size:13px;color:#001F3F;margin-bottom:2px}
+  .egc-hours-text{font-size:13px;color:#425578;line-height:1.5}
+
   .egc-badgewrap{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
   .egc-badge{font-size:12.5px;padding:8px 10px;border-radius:999px;border:1px solid #cde7ff;background:#f5fbff;color:#0a3a64}
 
@@ -161,7 +186,8 @@
   .egc-field{display:grid;gap:6px}
   .egc-field label{font-size:13px;color:#24324a;font-weight:600}
   .egc-field input,
-  .egc-field textarea{
+  .egc-field textarea,
+  .egc-field select{
     border-radius:12px;border:1px solid #d7e3ff;background:#f9fbff;outline:none;
     padding:12px 14px;font:500 14.5px/1.5 Poppins,ui-sans-serif;color:#0f1f3a;
     transition:border-color .15s, box-shadow .15s, background .15s;
@@ -169,8 +195,26 @@
   .egc-field textarea{min-height:120px;resize:vertical}
   .egc-field input::placeholder,
   .egc-field textarea::placeholder{color:#7b8aab}
+
+  .egc-field select{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    background-image:
+      linear-gradient(45deg, transparent 50%, #7b8aab 50%),
+      linear-gradient(135deg, #7b8aab 50%, transparent 50%);
+    background-position:
+      calc(100% - 16px) calc(50% - 3px),
+      calc(100% - 11px) calc(50% - 3px);
+    background-size:5px 5px,5px 5px;
+    background-repeat:no-repeat;
+  }
+
   .egc-field input:focus,
-  .egc-field textarea:focus{border-color:#7fb8ff;box-shadow:0 0 0 4px rgba(127,184,255,.25);background:#fff}
+  .egc-field textarea:focus,
+  .egc-field select:focus{
+    border-color:#7fb8ff;box-shadow:0 0 0 4px rgba(127,184,255,.25);background:#fff;
+  }
 
   .egc-actions{display:flex;align-items:center;gap:12px;margin-top:10px;flex-wrap:wrap}
   .egc-btn{
