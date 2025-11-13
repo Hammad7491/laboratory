@@ -6,6 +6,7 @@
 @include('indexes.section3')
 @include('indexes.section4')
 @include('indexes.section5')
+@include('indexes.section6')
 
 
 

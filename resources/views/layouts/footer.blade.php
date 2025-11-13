@@ -32,9 +32,9 @@
       <h4 class="egf-title">Quick Links</h4>
       <ul class="egf-list">
         <li><a href="{{ url('/') }}">Home</a></li>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#locations">Locations</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="{{ route('aboutus') }}">About Us</a></li>
+        <li><a href="{{ route('location') }}">Locations</a></li>
+        <li><a href="{{ route('contactus') }}">Contact</a></li>
       </ul>
     </div>
 
@@ -60,14 +60,14 @@
         </li>
         <li>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15v4a2 2 0 0 1-2 2c-9.94 0-18-8.06-18-18a2 2 0 0 1 2-2h4l2 5-3 2a14 14 0 0 0 6 6l2-3 5 2z"/></svg>
-          (000) 123-4567
+          201-688-0338
         </li>
         <li>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a2 2 0 0 1 2 2v1l-10 6L2 7V6a2 2 0 0 1 2-2Zm18 6.6V18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.4l10 6 10-6Z"/></svg>
-          hello@emmagenix.com
+          info@emmagenix.com
         </li>
         <li>
-          <a class="egf-btn" href="#contact">Book an Appointment</a>
+          <a class="egf-btn" href="{{ route('contactus') }}">Book an Appointment</a>
         </li>
       </ul>
     </div>
