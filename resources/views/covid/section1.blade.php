@@ -1,191 +1,281 @@
 <!-- COVID-19 TEST PAGE: HERO + CONTENT -->
-<section class="svc-covid" style="padding-top:18px;">
-  <!-- Hero -->
-  <div class="svc-hero" style="
-      position:relative; overflow:hidden; border-radius:18px; max-width:1100px; margin:0 auto 28px;">
+<section class="svc-covid">
+
+  <!-- HERO -->
+  <div class="svc-hero">
     <img
       src="https://images.pexels.com/photos/5863389/pexels-photo-5863389.jpeg?auto=compress&cs=tinysrgb&w=1600"
       alt="Healthcare professional collecting a nasal swab for COVID-19 test"
-      style="width:100%; height:420px; object-fit:cover; display:block; filter:saturate(104%);">
-    <div style="position:absolute; inset:0; background:linear-gradient(180deg,rgba(10,18,36,.55),rgba(10,18,36,.55));"></div>
+      class="svc-hero-img">
 
-    <div style="position:absolute; inset:0; display:grid; place-items:center; text-align:center; color:#fff; padding:24px;">
+    <div class="svc-hero-overlay"></div>
+
+    <div class="svc-hero-text">
       <div>
-        <p style="margin:0 0 6px; letter-spacing:.25em; text-transform:uppercase; font:500 13px/1.2 Poppins, sans-serif;">
-          EmmaGenix Services
-        </p>
-        <h1 style="margin:0; font:500 clamp(32px,6vw,56px)/1.05 Poppins, sans-serif;">
-          COVID-19 Testing &amp; Collection
-        </h1>
-        <p style="max-width:760px; margin:12px auto 0; font:400 clamp(14px,2vw,17px)/1.6 Poppins, sans-serif; opacity:.95;">
-          Mobile &amp; on-site RT-PCR and Rapid Antigen collection with certified handling and
-          fast, secure result routing to your provider, portal, or employer.
+        <p class="svc-kicker">EmmaGenix Services</p>
+
+        <h1 class="svc-title">COVID-19 Testing &amp; Collection</h1>
+
+        <p class="svc-sub">
+          Mobile &amp; on-site RT-PCR and Rapid Antigen collection with certified handling and fast,
+          secure result routing to your provider, portal, or employer.
         </p>
       </div>
     </div>
   </div>
 
-  <!-- Body -->
-  <div style="max-width:1100px; margin:0 auto; padding:0 16px;">
-    <div class="svc-intro" style="display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:start;">
+  <!-- CONTENT -->
+  <div class="svc-container">
+
+    <div class="svc-intro">
       <div>
-        <!-- Dual-color headline (left part dark, right gradient) -->
-        <h2 style="font:500 26px/1.25 Poppins, sans-serif; margin:0 0 10px;">
-          <span style="color:#0f1f3a;">Mobile COVID-19</span>
-          <span style="
-            background:linear-gradient(135deg,#00b894 0%, #00c2ff 100%);
-            -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;">
-            Testing
-          </span>
-          <span style="color:#0f1f3a;">, On Your Schedule</span>
+
+        <h2 class="svc-heading">
+          <span class="dark">Mobile COVID-19</span>
+          <span class="gradient">Testing</span>
+          <span class="dark">, On Your Schedule</span>
         </h2>
 
-        <p style="font:400 16px/1.8 Poppins, sans-serif; color:#24324a; margin:0 0 12px;">
-          We collect samples where you are—home, office, school, or event—so you avoid long lines
-          and last-minute stress. Our team follows strict identity checks, labeling, and chain-of-custody to
-          keep your test accurate and compliant.
+        <p class="svc-text">
+          We collect samples where you are—home, office, school, or event—so you avoid long lines and last-minute stress.
+          Our team follows strict identity checks, labeling, and chain-of-custody procedures.
         </p>
 
-        <p style="font:400 16px/1.8 Poppins, sans-serif; color:#24324a; margin:0 0 12px;">
-          Choose <strong>Rapid Antigen</strong> for quick screening or <strong>RT-PCR</strong> for travel, surgery,
-          and definitive diagnostics. We work with trusted labs and route results securely to your provider,
-          patient portal, or employer.
+        <p class="svc-text">
+          Choose <strong>Rapid Antigen</strong> for fast screening or <strong>RT-PCR</strong> for travel, surgery,
+          and diagnostic confirmation. Results are routed securely to your provider or employer.
         </p>
 
-        <ul style="list-style:none; padding:0; margin:16px 0 0; display:grid; gap:10px;">
-          <li style="display:flex; gap:10px; align-items:flex-start;">
-            <span style="width:10px; height:10px; border-radius:50%;
-                          background:linear-gradient(135deg,#06b6d4,#7c3aed); margin-top:8px;"></span>
-            <span style="font:400 15.5px/1.7 Poppins, sans-serif; color:#1a2644;">
-              <strong>RT-PCR &amp; Rapid Antigen</strong> collection (nasal, per lab protocol)
-            </span>
-          </li>
-          <li style="display:flex; gap:10px; align-items:flex-start;">
-            <span style="width:10px; height:10px; border-radius:50%;
-                          background:linear-gradient(135deg,#06b6d4,#7c3aed); margin-top:8px;"></span>
-            <span style="font:400 15.5px/1.7 Poppins, sans-serif; color:#1a2644;">
-              <strong>Certified handling</strong>, labeled specimens, and secure chain-of-custody
-            </span>
-          </li>
-          <li style="display:flex; gap:10px; align-items:flex-start;">
-            <span style="width:10px; height:10px; border-radius:50%;
-                          background:linear-gradient(135deg,#06b6d4,#7c3aed); margin-top:8px;"></span>
-            <span style="font:400 15.5px/1.7 Poppins, sans-serif; color:#1a2644;">
-              <strong>Employer &amp; travel</strong> documentation support (per lab / destination requirements)
-            </span>
-          </li>
+        <ul class="svc-list">
+          <li><span class="dot"></span><span><strong>RT-PCR & Rapid Antigen</strong> (nasal, per lab protocol)</span></li>
+          <li><span class="dot"></span><span><strong>Certified handling</strong> and chain-of-custody compliance</span></li>
+          <li><span class="dot"></span><span><strong>Employer & travel</strong> documentation support</span></li>
         </ul>
       </div>
 
-      <!-- Side card -->
-      <aside style="
-          background:#fff; border:1px solid rgba(2,6,23,.06); border-radius:14px; padding:18px;
-          box-shadow:0 10px 24px rgba(2,6,23,.06);">
-        <h3 style="font:500 18px/1.4 Poppins, sans-serif; color:#0f1f3a; margin:0 0 8px;">What to Expect</h3>
-        <ol style="margin:0; padding-left:18px; font:400 14.5px/1.8 Poppins, sans-serif; color:#23304a;">
-          <li>Book your preferred window (home, office, or pop-up site).</li>
-          <li>ID &amp; order/consent checks; gentle sample collection.</li>
-          <li>Specimens are labeled, stored, and couriered to the lab.</li>
-          <li>Results routed to your provider / portal / employer asap.</li>
+      <!-- SIDE CARD -->
+      <aside class="svc-side">
+        <h3 class="svc-side-title">What to Expect</h3>
+
+        <ol class="svc-steps">
+          <li>Book the window that works for you.</li>
+          <li>ID & consent checks; gentle collection.</li>
+          <li>Specimens labeled, stored & couriered.</li>
+          <li>Results sent to provider / portal / employer.</li>
         </ol>
-        <a href="#book" style="
-            display:inline-block; margin-top:12px; padding:12px 16px; border-radius:10px;
-            background:linear-gradient(135deg,#001F3F,#00509E); color:#fff; text-decoration:none;
-            font:500 14.5px/1 Poppins, sans-serif; box-shadow:0 12px 22px rgba(0,40,85,.25);">
-          Book Appoinment
-        </a>
+
+        <a href="#book" class="svc-btn">Book Appointment</a>
       </aside>
     </div>
   </div>
 
-  <!-- Image strip (3 pics) -->
-  <div style="max-width:1100px; margin:26px auto 6px; padding:0 16px;">
-    <div style="display:grid; gap:14px; grid-template-columns:1fr 1fr 1fr;">
-      <figure style="margin:0; border-radius:14px; overflow:hidden; border:1px solid rgba(2,6,23,.06);
-                     box-shadow:0 8px 18px rgba(2,6,23,.06);">
-        <img
-          src="https://images.pexels.com/photos/5863393/pexels-photo-5863393.jpeg?auto=compress&cs=tinysrgb&w=1200"
-          alt="Nasal swab sample collection"
-          style="width:100%; height:220px; object-fit:cover;">
-        <figcaption style="padding:10px 12px; font:400 14px/1.6 Poppins, sans-serif; color:#334155;">
-          Gentle, lab-protocol nasal swab collection.
-        </figcaption>
+  <!-- GALLERY -->
+  <div class="svc-gallery">
+    <div class="svc-gallery-grid">
+
+      <figure class="svc-fig">
+        <img src="https://images.pexels.com/photos/5863393/pexels-photo-5863393.jpeg?auto=compress&cs=tinysrgb&w=1200"
+             class="svc-fig-img">
+        <figcaption class="svc-fig-cap">Gentle, lab-protocol nasal swab collection.</figcaption>
       </figure>
 
-      <figure style="margin:0; border-radius:14px; overflow:hidden; border:1px solid rgba(2,6,23,.06);
-                     box-shadow:0 8px 18px rgba(2,6,23,.06);">
-        <img
-          src="https://images.pexels.com/photos/4031867/pexels-photo-4031867.jpeg?auto=compress&cs=tinysrgb&w=1200"
-          alt="PCR analysis in laboratory"
-          style="width:100%; height:220px; object-fit:cover;">
-        <figcaption style="padding:10px 12px; font:400 14px/1.6 Poppins, sans-serif; color:#334155;">
-          RT-PCR for travel, surgery, and definitive diagnostics.
-        </figcaption>
+      <figure class="svc-fig">
+        <img src="https://images.pexels.com/photos/4031867/pexels-photo-4031867.jpeg?auto=compress&cs=tinysrgb&w=1200"
+             class="svc-fig-img">
+        <figcaption class="svc-fig-cap">RT-PCR for travel, surgery, and diagnostics.</figcaption>
       </figure>
 
-      <figure style="margin:0; border-radius:14px; overflow:hidden; border:1px solid rgba(2,6,23,.06);
-                     box-shadow:0 8px 18px rgba(2,6,23,.06);">
-        <img
-          src="https://images.pexels.com/photos/3952234/pexels-photo-3952234.jpeg?auto=compress&cs=tinysrgb&w=1200"
-          alt="COVID-19 tubes and labels"
-          style="width:100%; height:220px; object-fit:cover;">
-        <figcaption style="padding:10px 12px; font:400 14px/1.6 Poppins, sans-serif; color:#334155;">
-          Secure labeling &amp; tracked courier drop-off to partnered labs.
-        </figcaption>
+      <figure class="svc-fig">
+        <img src="https://images.pexels.com/photos/3952234/pexels-photo-3952234.jpeg?auto=compress&cs=tinysrgb&w=1200"
+             class="svc-fig-img">
+        <figcaption class="svc-fig-cap">Secure labeling & tracked courier delivery.</figcaption>
       </figure>
+
     </div>
   </div>
 
-  <!-- FAQs -->
-  <div style="max-width:980px; margin:20px auto 0; padding:0 16px;">
-    <details style="background:#fff;border:1px solid rgba(2,6,23,.08);border-radius:12px;padding:14px 16px;margin-bottom:10px;">
-      <summary style="cursor:pointer; font:500 15px/1.5 Poppins, sans-serif; color:#0f1f3a;">
-        Which test should I choose—Rapid Antigen or RT-PCR?
-      </summary>
-      <div style="font:400 14.5px/1.75 Poppins, sans-serif; color:#334155; padding-top:8px;">
-        Antigen is fast screening for current infection and many return-to-work cases. RT-PCR is the
-        gold standard for travel, pre-op, and clinical confirmation—your provider or destination may
-        require it. We’ll collect per your order and forward to the appropriate lab.
-      </div>
+  <!-- FAQ -->
+  <div class="svc-faq">
+
+    <details class="faq-item">
+      <summary>Which test should I choose—Rapid Antigen or RT-PCR?</summary>
+      <div>Antigen is fast screening. RT-PCR is required for travel, pre-op and clinical confirmation.</div>
     </details>
 
-    <details style="background:#fff;border:1px solid rgba(2,6,23,.08);border-radius:12px;padding:14px 16px;margin-bottom:10px;">
-      <summary style="cursor:pointer; font:500 15px/1.5 Poppins, sans-serif; color:#0f1f3a;">
-        How quickly will I get results?
-      </summary>
-      <div style="font:400 14.5px/1.75 Poppins, sans-serif; color:#334155; padding-top:8px;">
-        Antigen results are generally same-day (per employer/program). RT-PCR turnaround depends on
-        the destination lab and the submission time—commonly 24–48 hours. We route results securely
-        to your provider, portal, or employer.
-      </div>
+    <details class="faq-item">
+      <summary>How quickly will I get results?</summary>
+      <div>Antigen is usually same-day. PCR is typically 24–48 hours depending on the lab.</div>
     </details>
 
-    <details style="background:#fff;border:1px solid rgba(2,6,23,.08);border-radius:12px;padding:14px 16px;">
-      <summary style="cursor:pointer; font:500 15px/1.5 Poppins, sans-serif; color:#0f1f3a;">
-        What should I prepare before my collection?
-      </summary>
-      <div style="font:400 14.5px/1.75 Poppins, sans-serif; color:#334155; padding-top:8px;">
-        Bring a valid photo ID, any provider order/consent, and travel documents if applicable.
-        Please avoid nasal sprays shortly before your appointment unless directed otherwise.
-      </div>
+    <details class="faq-item">
+      <summary>What should I prepare?</summary>
+      <div>Bring ID, provider order, consent and travel documents. Avoid nasal sprays before collection.</div>
     </details>
+
   </div>
 
   <!-- CTA -->
-  <div style="max-width:980px; margin:20px auto 36px; padding:0 16px; text-align:center;">
-    <a href="#book" style="
-        display:inline-block; padding:14px 22px; border-radius:12px;
-        background:linear-gradient(135deg,#001F3F,#00509E); color:#fff; text-decoration:none;
-        font:500 16px/1 Poppins, sans-serif; box-shadow:0 14px 28px rgba(0,40,85,.28);
-        transition:transform .12s ease, filter .2s ease;">
-      Schedule COVID-19 Collection
-    </a>
+  <div class="svc-cta">
+    <a href="#book" class="svc-btn-lg">Schedule COVID-19 Collection</a>
   </div>
+
 </section>
 
-<!-- Page-scoped tweak -->
+<!-- RESPONSIVE CSS -->
 <style>
-  @media (max-width: 920px){
-    .svc-intro{ grid-template-columns:1fr; }
+
+  /* GENERAL */
+  .svc-covid { padding-top:18px; font-family:'Poppins', sans-serif; }
+  .svc-container { max-width:1100px; margin:auto; padding:0 16px; }
+
+  /* HERO */
+  .svc-hero {
+    position:relative;
+    max-width:1100px;
+    margin:0 auto 28px;
+    border-radius:18px;
+    overflow:hidden;
   }
+
+  .svc-hero-img {
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    filter:saturate(104%);
+  }
+
+  @media (max-width:768px){
+    .svc-hero-img { height:320px; }
+  }
+  @media (max-width:480px){
+    .svc-hero-img { height:250px; }
+  }
+
+  .svc-hero-overlay {
+    position:absolute; inset:0;
+    background:linear-gradient(180deg,rgba(10,18,36,.55),rgba(10,18,36,.55));
+  }
+
+  .svc-hero-text {
+    position:absolute; inset:0;
+    color:#fff; display:grid; place-items:center;
+    text-align:center; padding:24px;
+  }
+
+  .svc-kicker { letter-spacing:.25em; text-transform:uppercase; font-size:13px; }
+
+  .svc-title {
+    margin:0;
+    font-size:clamp(32px,6vw,56px);
+    font-weight:500;
+  }
+
+  .svc-sub {
+    max-width:760px;
+    margin:12px auto 0;
+    font-size:clamp(14px,2vw,17px);
+  }
+
+  /* CONTENT GRID */
+  .svc-intro {
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:28px;
+    align-items:start;
+  }
+
+  @media (max-width:920px){
+    .svc-intro { grid-template-columns:1fr; }
+  }
+
+  .svc-heading { font-size:26px; margin-bottom:12px; }
+  .dark { color:#0f1f3a; }
+  .gradient {
+    background:linear-gradient(135deg,#00b894,#00c2ff);
+    -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+  }
+
+  .svc-text { font-size:16px; color:#24324a; line-height:1.8; }
+
+  /* BULLET LIST */
+  .svc-list { list-style:none; padding:0; margin-top:16px; display:grid; gap:12px; }
+  .svc-list li { display:flex; gap:10px; }
+  .dot {
+    width:10px; height:10px; margin-top:7px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#06b6d4,#7c3aed);
+  }
+
+  /* SIDE CARD */
+  .svc-side {
+    background:#fff;
+    padding:18px;
+    border-radius:14px;
+    border:1px solid rgba(2,6,23,.06);
+    box-shadow:0 10px 24px rgba(2,6,23,.06);
+  }
+
+  .svc-side-title { font-size:18px; margin-bottom:8px; }
+
+  .svc-steps {
+    padding-left:18px;
+    font-size:14.5px;
+    line-height:1.8;
+    color:#23304a;
+  }
+
+  .svc-btn {
+    display:inline-block;
+    margin-top:12px;
+    padding:12px 16px;
+    border-radius:10px;
+    background:linear-gradient(135deg,#001F3F,#00509E);
+    color:#fff; text-decoration:none;
+    box-shadow:0 12px 22px rgba(0,40,85,.25);
+    font-size:14.5px;
+  }
+
+  /* GALLERY */
+  .svc-gallery { max-width:1100px; margin:26px auto; padding:0 16px; }
+
+  .svc-gallery-grid {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+  }
+
+  @media (max-width:768px){
+    .svc-gallery-grid { grid-template-columns:1fr; }
+  }
+
+  .svc-fig { border-radius:14px; overflow:hidden; box-shadow:0 8px 18px rgba(2,6,23,.06); }
+  .svc-fig-img { width:100%; height:220px; object-fit:cover; }
+  .svc-fig-cap { padding:10px 12px; font-size:14px; }
+
+  /* FAQ */
+  .svc-faq { max-width:980px; margin:20px auto; padding:0 16px; }
+
+  .faq-item {
+    background:#fff;
+    border:1px solid rgba(2,6,23,.08);
+    border-radius:12px;
+    padding:14px 16px;
+    margin-bottom:12px;
+  }
+
+  .faq-item summary { cursor:pointer; font-weight:500; color:#0f1f3a; }
+  .faq-item div { margin-top:8px; font-size:14.5px; color:#334155; line-height:1.75; }
+
+  /* CTA */
+  .svc-cta { text-align:center; margin:20px auto 40px; }
+  .svc-btn-lg {
+    display:inline-block;
+    padding:14px 22px;
+    border-radius:12px;
+    background:linear-gradient(135deg,#001F3F,#00509E);
+    color:#fff; text-decoration:none;
+    font-size:16px;
+    box-shadow:0 14px 28px rgba(0,40,85,.28);
+  }
+
 </style>
