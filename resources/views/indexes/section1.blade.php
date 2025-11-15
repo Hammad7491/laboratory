@@ -23,37 +23,48 @@
   <!-- CONTENT -->
   <div class="eg-hero-inner" style="width:min(1200px,92%); margin-inline:auto; text-align:center; color:#fff;">
 
-    <p class="eg-kicker"
-      style="margin:0 0 18px 0; font:500 14px/1.2 'Poppins'; letter-spacing:.35em; text-transform:uppercase; opacity:.95;">
-      Welcome – Convenience Testing & Wellness Services
-    </p>
-
-    <h1 class="eg-title"
-      style="margin:0; font:600 clamp(42px,8vw,110px)/1 'Poppins'; letter-spacing:.01em;">
-      WELLNESS
-    </h1>
-
-    <!-- SIMPLE WHITE SUBTEXT -->
+    <!-- MAIN TAGLINE -->
     <div class="eg-subtext"
       style="
         margin-top:18px;
-        font:400 clamp(22px,5vw,48px)/1.3 'Poppins';
-        color:#ffffff;
+        font:700 clamp(26px,5vw,52px)/1.25 'Poppins';
       ">
-      Wellness at your doorstep<br>
-      Fast, easy, at-home testing
+
+      <!-- WE TEST (white) -->
+      <span style="
+        display:block;
+        color:#ffffff;
+        text-shadow:0 3px 10px rgba(0,0,0,.35);
+      ">
+        We test
+      </span>
+
+      <!-- YOU RELAX AT HOME (Genix gradient) -->
+      <!-- YOU RELAX AT HOME (Genix matching gradient + white highlight) -->
+<span style="
+  display:block;
+  margin-top:4px;
+  font-weight:700;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.28), rgba(255,255,255,0)) ,   /* subtle white shine */
+    linear-gradient(90deg,#00B894,#00C2FF);                                  /* Genix gradient */
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  text-shadow:0 2px 6px rgba(0,0,0,0.12);    /* very soft shadow, no darkness */
+">
+  You relax at home
+</span>
+
     </div>
 
-    <div class="eg-pill"
-      style="display:inline-block; margin: clamp(18px,3.5vh,28px) 0 24px 0;
-        padding:14px 22px; border-radius:14px;
-        border:1.5px solid rgba(255,255,255,.65);
-        background:rgba(255,255,255,.06); backdrop-filter:blur(6px);
-        font:500 clamp(12px,1.8vw,16px)/1.2 'Poppins';
-        letter-spacing:.38em; text-transform:uppercase;">
-      Discover fast, at-home lab testing & IV therapy
-    </div>
+    <!-- KICKER -->
+    <p class="eg-kicker"
+      style="margin:16px 0 18px 0; font:500 14px/1.2 'Poppins'; letter-spacing:.35em; text-transform:uppercase; opacity:.95;">
+      Welcome – Convenience Testing & Wellness Services
+    </p>
 
+    <!-- CTA BUTTON -->
     <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
       <a href="#book" class="eg-btn-primary"
         style="display:inline-block; padding:14px 26px; border-radius:12px;
@@ -68,27 +79,3 @@
   </div>
 </section>
 <!-- HERO SECTION END -->
-
-<style>
-  .eg-btn-primary:hover{
-    transform:translateY(-2px);
-    filter:saturate(115%);
-    box-shadow:0 18px 36px rgba(0,31,63,.45);
-  }
-
-  @media (max-width: 520px){
-    .eg-pill{
-      letter-spacing:.28em !important;
-      padding:12px 16px !important;
-    }
-    .eg-hero{
-      min-height: 70vh !important;
-    }
-  }
-
-  @media (max-width: 768px){
-    .eg-hero-video{
-      object-position:center;
-    }
-  }
-</style>
