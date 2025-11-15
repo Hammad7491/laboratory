@@ -1,195 +1,154 @@
-{{-- resources/views/home/partials/states.blade.php --}}
-
-<section class="eg-home-states">
+{{-- READY TO GET STARTED SECTION --}}
+<section class="eg-get-started">
   <div class="egc-wrap">
+    <div class="eg-get-card">
+      <h2 class="eg-get-title">Ready to Get Started?</h2>
+      <p class="eg-get-sub">
+        Call us today to schedule mobile phlebotomy, DNA testing, drug screens, IV hydration, and more.
+        Emergency service emails are typically answered within <strong>15–20 minutes</strong>.
+      </p>
 
-    <header class="eg-home-header">
-      <p class="eg-home-kicker">SERVICE AREAS</p>
-
-      <h2 class="eg-home-title">
-        Everything You Need to Know 
-        <span class="eg-highlight">About Our Coverage</span>
-      </h2>
-    </header>
-
-    <div class="eg-home-grid">
-
-      {{-- CARD 01 – NEW JERSEY --}}
-      <article class="eg-home-card">
-        <div class="eg-home-step">01</div>
-        <h3 class="eg-home-card-title">New Jersey</h3>
-        <p class="eg-home-card-text">
-          Our primary base of operations. We provide statewide mobile phlebotomy,
-          lab testing, and diagnostic services—at homes, offices, clinics, and
-          community facilities across New Jersey.
-        </p>
-        <a href="{{ url('/location') }}" class="eg-home-card-btn">
-          View Locations
+      <div class="eg-get-actions">
+        <!-- Call Now -->
+        <a href="tel:2016880338" class="eg-get-btn eg-get-call">
+          <span class="eg-get-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M21 15v4a2 2 0 0 1-2 2C9.94 21 3 14.06 3 5a2 2 0 0 1 2-2h4l2 5-3 2a10 10 0 0 0 6 6l2-3 5 2z"
+                stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="eg-get-text">
+            <span class="eg-get-label">Call Now</span>
+            <span class="eg-get-main">201-688-0338</span>
+          </span>
         </a>
-      </article>
 
-      {{-- CARD 02 – NEW YORK --}}
-      <article class="eg-home-card eg-home-card-highlight">
-        <div class="eg-home-step">02</div>
-        <h3 class="eg-home-card-title">New York</h3>
-        <p class="eg-home-card-text">
-          Serving the greater New York City area, including Manhattan, Brooklyn,
-          Queens, Bronx, and Staten Island—bringing mobile services directly to
-          patients and providers.
-        </p>
-        <a href="{{ url('/location') }}" class="eg-home-card-btn">
-          View Locations
+        <!-- Email Us -->
+        <a href="mailto:info@emmagenix.com" class="eg-get-btn eg-get-email">
+          <span class="eg-get-icon">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <rect x="3" y="5" width="18" height="14" rx="2" stroke-width="1.6"/>
+              <path d="M4 7l8 6 8-6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="eg-get-text">
+            <span class="eg-get-label">Email Us</span>
+            <span class="eg-get-main">info@emmagenix.com</span>
+          </span>
         </a>
-      </article>
-
-      {{-- CARD 03 – PENNSYLVANIA --}}
-      <article class="eg-home-card">
-        <div class="eg-home-step">03</div>
-        <h3 class="eg-home-card-title">Pennsylvania</h3>
-        <p class="eg-home-card-text">
-          Growing coverage across Pennsylvania, including Philadelphia,
-          Pittsburgh, Scranton, Altoona, Erie, Bethlehem, and Harrisburg, with
-          flexible scheduling for mobile phlebotomy and diagnostics.
-        </p>
-        <a href="{{ url('/location') }}" class="eg-home-card-btn">
-          View Locations
-        </a>
-      </article>
-
+      </div>
     </div>
   </div>
 </section>
 
 <style>
-  .eg-home-states{
-    --navy:#001F3F;       /* logo color */
-    --teal:#00c2b3;       /* highlight color */
-    --muted:#6b7693;
-    font-family:'Poppins',ui-sans-serif,system-ui;
-    padding:40px 0 46px;
-    background:radial-gradient(circle at top,#f3f5ff 0%,#eef4ff 28%,#f9fbff 60%,#ffffff 100%);
-  }
+/* LIGHT SECTION BACKGROUND */
+.eg-get-started{
+  padding:36px 0 40px;
+  background:#f6f9ff;
+  font-family:'Poppins',ui-sans-serif,system-ui;
+}
 
-  .egc-wrap{
-    max-width:1200px;
-    margin:0 auto;
-    padding:0 18px;
-  }
+/* NAVY BLUE ROUNDED BOX */
+.eg-get-card{
+  max-width:1200px;
+  margin:0 auto;
+  background:#001F3F; /* NAVY BLUE */
+  border-radius:32px;
+  padding:48px 30px 50px;
+  box-shadow:0 25px 50px rgba(0,0,0,.35);
+  text-align:center;
+  color:#ffffff;
+}
 
-  .eg-home-header{
-    text-align:center;
-    margin-bottom:26px;
-  }
+/* TITLE */
+.eg-get-title{
+  color:#ffffff;
+  font-size:clamp(26px,3vw,34px);
+  font-weight:800;
+  margin-bottom:8px;
+}
 
-  .eg-home-kicker{
-    text-transform:uppercase;
-    letter-spacing:.26em;
-    font-size:11px;
-    font-weight:600;
-    color:#7a86a8;
-    margin-bottom:6px;
-  }
+/* SUB TEXT */
+.eg-get-sub{
+  max-width:760px;
+  margin:0 auto 32px;
+  font-size:16px;
+  color:#e3e9f4;
+  line-height:1.7;
+}
 
-  /* Dual colored main heading */
-  .eg-home-title{
-    margin:0;
-    font-size:clamp(24px,4vw,30px);
-    font-weight:800;
-    color:#0a1b2e;  /* dark navy */
-  }
+/* BUTTONS WRAP */
+.eg-get-actions{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
 
-  .eg-home-title .eg-highlight{
-    color:var(--teal);   /* teal highlight */
-  }
+/* SHARED BUTTON DESIGN */
+.eg-get-btn{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:16px 26px;
+  border-radius:999px;
+  text-decoration:none;
+  min-width:260px;
+  justify-content:center;
+  font-size:15px;
+  font-weight:600;
+  transition:.2s;
+}
 
-  .eg-home-grid{
-    display:grid;
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    gap:18px;
-  }
+/* ICON STYLE */
+.eg-get-icon{
+  width:40px;
+  height:40px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:50%;
+}
 
-  .eg-home-card{
-    background:#ffffff;
-    border-radius:22px;
-    padding:22px 20px 20px;
-    box-shadow:0 18px 40px rgba(15,23,42,.07);
-    border:1px solid rgba(148,163,184,.18);
-    position:relative;
-    overflow:hidden;
-    display:flex;
-    flex-direction:column;
-  }
+/* TEXT */
+.eg-get-label{
+  font-size:12px;
+  text-transform:uppercase;
+  opacity:.8;
+}
 
-  .eg-home-card-highlight{
-    box-shadow:0 22px 52px rgba(0,31,63,.25);
-    border-color:rgba(0,31,63,.4);
-  }
+.eg-get-main{
+  font-size:18px;
+  font-weight:700;
+}
 
-  .eg-home-card::before{
-    content:"";
-    position:absolute;
-    inset:-60px -40px auto auto;
-    background:radial-gradient(circle at 10% 10%,rgba(0,31,63,.22),transparent 60%);
-    opacity:.9;
-    pointer-events:none;
-  }
+/* CALL BUTTON */
+.eg-get-call{
+  background:linear-gradient(135deg,#00b894 0%,#00c2ff 70%);
+  color:white;
+  box-shadow:0 16px 32px rgba(0,150,200,.40);
+}
 
-  .eg-home-step{
-    font-size:30px;
-    font-weight:800;
-    color:var(--navy);
-    margin-bottom:4px;
-  }
+.eg-get-call .eg-get-icon{
+  background:rgba(255,255,255,.22);
+}
 
-  .eg-home-card-title{
-    font-size:16px;
-    text-transform:uppercase;
-    letter-spacing:.16em;
-    font-weight:700;
-    color:var(--navy);
-    margin:0 0 10px;
-  }
+/* EMAIL BUTTON */
+.eg-get-email{
+  background:white;
+  color:#001F3F;
+  border:1px solid #cfe2ff;
+}
 
-  .eg-home-card-text{
-    font-size:14px;
-    line-height:1.8;
-    color:var(--muted);
-    margin:0 0 16px;
-    flex:1 1 auto;
-  }
+.eg-get-email .eg-get-icon{
+  background:#eef4ff;
+  color:#00509E;
+}
 
-  /* Button navy blue */
-  .eg-home-card-btn{
-    align-self:flex-start;
-    padding:8px 18px;
-    border-radius:999px;
-    font-size:13px;
-    font-weight:600;
-    text-decoration:none;
-    color:#ffffff;
-    background:linear-gradient(135deg, #001F3F, #003466);
-    box-shadow:0 10px 24px rgba(0,31,63,.35);
-    transition:transform .12s ease, box-shadow .12s ease, filter .12s ease;
+@media(max-width:640px){
+  .eg-get-btn{
+    width:100%;
   }
-
-  .eg-home-card-btn:hover{
-    transform:translateY(-1px);
-    filter:saturate(115%);
-    box-shadow:0 14px 32px rgba(0,31,63,.45);
-  }
-
-  /* Responsive */
-  @media (max-width:992px){
-    .eg-home-grid{
-      grid-template-columns:repeat(2,minmax(0,1fr));
-    }
-  }
-  @media (max-width:720px){
-    .eg-home-grid{
-      grid-template-columns:1fr;
-    }
-    .eg-home-card{
-      border-radius:18px;
-    }
-  }
+}
 </style>
