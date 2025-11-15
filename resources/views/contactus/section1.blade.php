@@ -37,7 +37,7 @@
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
             <path d="M21 15v4a2 2 0 0 1-2 2c-9.94 0-18-8.06-18-18a2 2 0 0 1 2-2h4l2 5-3 2a14 14 0 0 0 6 6l2-3 5 2z"/>
           </svg>
-          908 613 2200
+          908-613-2200
         </li>
         <li>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
