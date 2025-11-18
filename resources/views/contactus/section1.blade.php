@@ -152,25 +152,29 @@ document.getElementById("egcForm").addEventListener("submit", function(e) {
         body: new FormData(form),
         headers: { 'X-CSRF-TOKEN': '{{ csrf_token() }}' }
     })
-    .then(res => res.json())
-    .then(res => {
-        if (res.status === "success") {
+    .then(async (res) => {
+        let data = {};
+        try { data = await res.json(); } catch (e) {}
+
+        if (res.ok && data.status === "success") {
             status.innerHTML = "Appointment sent successfully!";
             status.style.color = "#0f5132";
             form.reset();
         } else {
-            status.innerHTML = "Failed to send. Try again.";
+            const msg = data.message || "Unknown SMTP error.";
+            status.innerHTML = "Error sending email: " + msg;
             status.style.color = "#842029";
         }
         btn.disabled = false;
     })
     .catch(err => {
-        status.innerHTML = "Error sending email.";
+        status.innerHTML = "Error sending email: " + err;
         status.style.color = "#842029";
         btn.disabled = false;
     });
 });
 </script>
+
 
 <!-- ============================
      FULL CSS (DO NOT REMOVE)

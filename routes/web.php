@@ -49,4 +49,6 @@ Route::get('/phlebotomy', [PagesController::class, 'phlebotomy'])
       Route::get('/location', [PagesController::class, 'location'])
      ->name('location');
 
-     Route::post('/send-appointment', [App\Http\Controllers\ContactController::class, 'send']);
+     
+Route::post('/send-appointment', [ContactController::class, 'send'])
+     ->name('send-appointment');

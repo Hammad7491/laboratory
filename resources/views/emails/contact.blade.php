@@ -5,10 +5,10 @@
 <p><strong>Phone:</strong> {{ $phone }}</p>
 <p><strong>Service Needed:</strong> {{ $need }}</p>
 
-@if($comment)
-<p><strong>Comment:</strong><br>{{ $comment }}</p>
+@if(!empty($comment))
+    <p><strong>Comment:</strong><br>{{ $comment }}</p>
 @endif
 
 <p style="margin-top:20px;">
-  <small>Submitted at: {{ now() }}</small>
+  <small>Submitted at: {{ $submitted_at }}</small>
 </p>

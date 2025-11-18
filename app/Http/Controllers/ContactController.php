@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Log;
 
 class ContactController extends Controller
 {
@@ -26,13 +27,26 @@ class ContactController extends Controller
             'comment' => $request->comment,
         ];
 
-        // SEND EMAIL TO YOUR BUSINESS EMAIL
-        Mail::send('emails.contact', $data, function ($message) use ($request) {
-            $message->to('info@emmagenix.com')
+        try {
+            // Important: from() should be your own domain email, not the user email
+            Mail::send('emails.contact', $data, function ($message) use ($request) {
+                $message->to('info@emmagenix.com')
                     ->subject('New Appointment Request from EmmaGenix Website')
-                    ->from($request->email, $request->first_name . ' ' . $request->last_name);
-        });
+                    ->from('info@emmagenix.com', 'EmmaGenix Contact Form')
+                    ->replyTo($request->email, $request->first_name . ' ' . $request->last_name);
+            });
 
-        return response()->json(['status' => 'success']);
+            return response()->json(['status' => 'success']);
+        } catch (\Throwable $e) {
+            // Log so you can see the real error in storage/logs/laravel.log
+            Log::error('Contact form mail error', [
+                'message' => $e->getMessage(),
+            ]);
+
+            return response()->json([
+                'status'  => 'error',
+                'message' => 'Mail send failed on the server.',
+            ], 500);
+        }
     }
 }
