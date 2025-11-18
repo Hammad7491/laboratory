@@ -12,43 +12,38 @@
     <div class="egc-hero-inner">
       <p class="egc-kicker">Contact EmmaGenix</p>
       <h1 class="egc-title">We’re ready to help</h1>
-      <p class="egc-sub">Tell us what you need—mobile phlebotomy, lab testing, DNA/drug screens, IV hydration, or more.</p>
+      <p class="egc-sub">
+        Tell us what you need—mobile phlebotomy, lab testing, DNA/drug screens, IV hydration, or more.
+      </p>
     </div>
   </div>
 
   <!-- CONTENT -->
   <div class="egc-wrap egc-grid">
 
-    <!-- Left: Contact details -->
+    <!-- LEFT SIDE -->
     <aside class="egc-card">
       <h2 class="egc-h2">Get in touch</h2>
       <p class="egc-p">Prefer talking? Reach us anytime and we’ll schedule a convenient mobile visit.</p>
 
       <ul class="egc-list">
         <li>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M21 15v4a2 2 0 0 1-2 2c-9.94 0-18-8.06-18-18a2 2 0 0 1 2-2h4l2 5-3 2a14 14 0 0 0 6 6l2-3 5 2z"/>
-          </svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15v4a2 2 0 0 1-2 2c-9.94 0-18-8.06-18-18a2 2 0 0 1 2-2h4l2 5-3 2a14 14 0 0 0 6 6l2-3 5 2z"/></svg>
           201-688-0338
         </li>
 
-
         <li>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M21 15v4a2 2 0 0 1-2 2c-9.94 0-18-8.06-18-18a2 2 0 0 1 2-2h4l2 5-3 2a14 14 0 0 0 6 6l2-3 5 2z"/>
-          </svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M21 15v4a2 2 0 0 1-2 2c-9.94 0-18-8.06-18-18a2 2 0 0 1 2-2h4l2 5-3 2a14 14 0 0 0 6 6l2-3 5 2z"/></svg>
           908-613-2200
         </li>
+
         <li>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M4 4h16a2 2 0 0 1 2 2v1l-10 6L2 7V6a2 2 0 0 1 2-2Zm18 6.6V18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.4l10 6 10-6Z"/>
-          </svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16a2 2 0 0 1 2 2v1l-10 6L2 7V6a2 2 0 0 1 2-2Zm18 6.6V18a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-7.4l10 6 10-6Z"/></svg>
           info@emmagenix.com
         </li>
+
         <li class="egc-hours">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm0 2a8 8 0 1 1 0 16A8 8 0 0 1 12 4Zm-1 2h2v5.17l3.12 3.11-1.42 1.42L11 12.59V6Z"/>
-          </svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2Zm0 2a8 8 0 1 1 0 16A8 8 0 0 1 12 4Zm-1 2h2v5.17l3.12 3.11-1.42 1.42L11 12.59V6Z"/></svg>
           <div>
             <div class="egc-hours-title">Business Hours</div>
             <div class="egc-hours-text">
@@ -66,57 +61,40 @@
       </div>
     </aside>
 
-    <!-- Right: Form -->
+    <!-- RIGHT SIDE (FORM) -->
     <div class="egc-card">
       <h2 class="egc-h2">Book Appointment</h2>
 
-      {{-- Optional server flashes if you ever post to backend --}}
-      {{--
-      @if(session('status'))
-        <div class="egc-alert success">{{ session('status') }}</div>
-      @endif
-
-      @if ($errors->any())
-        <div class="egc-alert error">
-          <ul>
-            @foreach ($errors->all() as $error)
-              <li>{{ $error }}</li>
-            @endforeach
-          </ul>
-        </div>
-      @endif
-      --}}
-
-      <form id="egcForm" class="egc-form" method="POST" action="" novalidate>
+      <form id="egcForm" class="egc-form" method="POST" action="/send-appointment">
         @csrf
 
         <div class="egc-row">
           <div class="egc-field">
-            <label for="first_name">First name</label>
-            <input type="text" id="first_name" name="first_name" value="{{ old('first_name') }}" placeholder="John" required>
+            <label>First name</label>
+            <input type="text" name="first_name" placeholder="John" required>
           </div>
 
           <div class="egc-field">
-            <label for="last_name">Last name</label>
-            <input type="text" id="last_name" name="last_name" value="{{ old('last_name') }}" placeholder="Doe" required>
+            <label>Last name</label>
+            <input type="text" name="last_name" placeholder="Doe" required>
           </div>
         </div>
 
         <div class="egc-row">
           <div class="egc-field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" value="{{ old('email') }}" placeholder="you@example.com" required>
+            <label>Email</label>
+            <input type="email" name="email" placeholder="you@example.com" required>
           </div>
 
           <div class="egc-field">
-            <label for="phone">Phone number</label>
-            <input type="tel" id="phone" name="phone" value="{{ old('phone') }}" placeholder="+1 (___) ___-____" inputmode="tel" pattern="[\d\+\-\(\)\s]{7,}" required>
+            <label>Phone</label>
+            <input type="tel" name="phone" placeholder="+1 (___) ___-____" required>
           </div>
         </div>
 
         <div class="egc-field">
-          <label for="need">Which type of service do you need?</label>
-          <select id="need" name="need" required>
+          <label>Which type of service do you need?</label>
+          <select name="need" required>
             <option value="" disabled selected>Select a service</option>
             <option value="Phlebotomy">Phlebotomy</option>
             <option value="Covid-19 Test">Covid-19 Test</option>
@@ -131,25 +109,21 @@
         </div>
 
         <div class="egc-field">
-          <label for="comment">Comment</label>
-          <textarea id="comment" name="comment" rows="4" placeholder="Share any details (address, preferred time window, physician order, lab kit info, etc.)">{{ old('comment') }}</textarea>
+          <label>Comment</label>
+          <textarea name="comment" rows="4" placeholder="Share any details..."></textarea>
         </div>
-
-        {{-- Honeypot (spam guard) --}}
-        <input type="text" name="hp_field" style="display:none" tabindex="-1" autocomplete="off" />
 
         <div class="egc-actions">
           <button id="egcSubmit" type="submit" class="egc-btn">Send Request</button>
-          <p class="egc-mini">By submitting, you agree to our <a href="#">Privacy Policy</a>.</p>
         </div>
 
-        <!-- Status line for EmailJS feedback -->
         <p id="egcStatus" style="margin-top:10px;font-weight:600;"></p>
+
       </form>
     </div>
   </div>
 
-  <!-- Band -->
+  <!-- BAND -->
   <div class="egc-band">
     <div class="egc-wrap egc-band-inner">
       <h3>Mobile care—on your schedule.</h3>
@@ -157,6 +131,50 @@
     </div>
   </div>
 </section>
+
+<!-- ============================
+     AJAX SCRIPT FOR LARAVEL MAIL
+     ============================ -->
+<script>
+document.getElementById("egcForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let form = this;
+    let btn  = document.getElementById("egcSubmit");
+    let status = document.getElementById("egcStatus");
+
+    btn.disabled = true;
+    status.innerHTML = "Sending...";
+    status.style.color = "#444";
+
+    fetch('/send-appointment', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'X-CSRF-TOKEN': '{{ csrf_token() }}' }
+    })
+    .then(res => res.json())
+    .then(res => {
+        if (res.status === "success") {
+            status.innerHTML = "Appointment sent successfully!";
+            status.style.color = "#0f5132";
+            form.reset();
+        } else {
+            status.innerHTML = "Failed to send. Try again.";
+            status.style.color = "#842029";
+        }
+        btn.disabled = false;
+    })
+    .catch(err => {
+        status.innerHTML = "Error sending email.";
+        status.style.color = "#842029";
+        btn.disabled = false;
+    });
+});
+</script>
+
+<!-- ============================
+     FULL CSS (DO NOT REMOVE)
+     ============================ -->
 
 <style>
   .eg-contact{--navy:#001F3F;--navy2:#0a1b37;--ink:#16233d;--muted:#5c6b89;
@@ -230,15 +248,6 @@
     background:linear-gradient(135deg,var(--navy),#00509E);box-shadow:0 12px 24px rgba(0,40,85,.25);font-weight:700
   }
   .egc-btn:hover{filter:saturate(112%);transform:translateY(-1px)}
-  .egc-mini{font-size:12.5px;color:#58709a}
-  .egc-mini a{color:#00509E;text-decoration:none}
-  .egc-mini a:hover{text-decoration:underline}
-
-  /* Alerts */
-  .egc-alert{border-radius:12px;padding:10px 12px;margin:8px 0;font-size:14px}
-  .egc-alert.success{background:#ecfff4;border:1px solid #b8f0ce;color:#0f5132}
-  .egc-alert.error{background:#fff3f1;border:1px solid #ffd2ca;color:#842029}
-  .egc-alert.error ul{margin:0;padding-left:18px}
 
   /* Band */
   .egc-band{background:#f6f9ff;border-top:1px solid #e5efff;margin:16px 0 0}
@@ -247,7 +256,6 @@
   .egc-band p{margin:2px 0 0;color:#2b3b5a}
 
   /* Responsive */
-  @media (max-width:1024px){.egc-hero img{height:380px}}
   @media (max-width:860px){
     .egc-grid{grid-template-columns:1fr}
     .egc-row{grid-template-columns:1fr}
@@ -258,85 +266,3 @@
     .egc-hero img{height:300px}
   }
 </style>
-
-<!-- EmailJS (Browser SDK) -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-@verbatim
-<script>
-  // EmailJS configuration
-  const EMAILJS_PUBLIC_KEY  = "Vty8OfMFupURMn9_8";   // public key
-  const EMAILJS_SERVICE_ID  = "service_k6xlh9n";     // Gmail service
-  const EMAILJS_TEMPLATE_ID = "template_lx5r89k";    // Appointment template
-
-  // Initialize EmailJS
-  (function () {
-    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
-  })();
-
-  const $ = (s) => document.querySelector(s);
-  const setStatus = (msg, type = "info") => {
-    const el = $("#egcStatus");
-    if (!el) return;
-    el.textContent = msg;
-    el.style.color =
-      type === "success" ? "#0f5132" :
-      type === "error"   ? "#842029" :
-                           "#1f2a44";
-  };
-
-  $("#egcForm").addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const form = e.target;
-    const btn  = $("#egcSubmit");
-
-    // Honeypot
-    if (form.hp_field && form.hp_field.value) {
-      setStatus("Blocked as spam.", "error");
-      return;
-    }
-
-    const params = {
-      first_name:   form.first_name.value.trim(),
-      last_name:    form.last_name.value.trim(),
-      email:        form.email.value.trim(),
-      phone:        form.phone.value.trim(),
-      need:         form.need.value.trim(),
-      comment:      form.comment.value.trim(),
-      submitted_at: new Date().toLocaleString(),
-      name: `${form.first_name.value.trim()} ${form.last_name.value.trim()}`.trim(),
-      message: form.comment.value.trim()
-    };
-
-    if (!params.first_name || !params.last_name || !params.email || !params.phone || !params.need) {
-      setStatus("Please fill in all required fields.", "error");
-      return;
-    }
-
-    try {
-      btn.disabled = true;
-      btn.style.opacity = 0.6;
-      setStatus("Sending...");
-
-      const res = await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params);
-
-      if (res.status === 200) {
-        setStatus("Appointment request sent successfully!", "success");
-        form.reset();
-      } else {
-        throw new Error("Unexpected EmailJS response: " + res.status);
-      }
-    } catch (err) {
-      console.error("EmailJS error:", err);
-      let extra = "";
-      if (err && err.text) extra = " (" + err.text + ")";
-      else if (err && err.message) extra = " (" + err.message + ")";
-      else if (err && err.status) extra = " (status " + err.status + ")";
-      setStatus("Failed to send. Please try again." + extra, "error");
-    } finally {
-      btn.disabled = false;
-      btn.style.opacity = 1;
-    }
-  });
-</script>
-@endverbatim

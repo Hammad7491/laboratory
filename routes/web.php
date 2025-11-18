@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\ContactController;
 
 Route::get('/', [PagesController::class, 'index'])
          ->name('index');
@@ -47,3 +48,5 @@ Route::get('/phlebotomy', [PagesController::class, 'phlebotomy'])
 
       Route::get('/location', [PagesController::class, 'location'])
      ->name('location');
+
+     Route::post('/send-appointment', [App\Http\Controllers\ContactController::class, 'send']);
