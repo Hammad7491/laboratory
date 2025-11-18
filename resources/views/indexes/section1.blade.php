@@ -39,28 +39,27 @@
         We test
       </span>
 
-      <!-- YOU RELAX AT HOME (Genix gradient) -->
       <!-- YOU RELAX AT HOME (Genix matching gradient + white highlight) -->
-<span style="
-  display:block;
-  margin-top:4px;
-  font-weight:700;
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0.28), rgba(255,255,255,0)) ,   /* subtle white shine */
-    linear-gradient(90deg,#00B894,#00C2FF);                                  /* Genix gradient */
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-  text-shadow:0 2px 6px rgba(0,0,0,0.12);    /* very soft shadow, no darkness */
-">
-  You relax at home
-</span>
+      <span style="
+        display:block;
+        margin-top:4px;
+        font-weight:700;
+        background:
+          linear-gradient(180deg, rgba(255,255,255,0.28), rgba(255,255,255,0)) ,   /* subtle white shine */
+          linear-gradient(90deg,#00B894,#00C2FF);                                  /* Genix gradient */
+        -webkit-background-clip:text;
+        background-clip:text;
+        color:transparent;
+        text-shadow:0 2px 6px rgba(0,0,0,0.12);    /* very soft shadow, no darkness */
+      ">
+        You relax at home
+      </span>
 
     </div>
 
     <!-- KICKER -->
     <p class="eg-kicker"
-      style="margin:16px 0 18px 0; font:500 14px/1.2 'Poppins'; letter-spacing:.35em; text-transform:uppercase; opacity:.95;">
+      style="margin:16px 0 70px 0; font:500 14px/1.2 'Poppins'; letter-spacing:.35em; text-transform:uppercase; opacity:.95;">
       Welcome – Convenience Testing & Wellness Services
     </p>
 
