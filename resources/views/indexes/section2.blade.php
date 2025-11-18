@@ -47,7 +47,7 @@
       <!-- Micronutrients -->
       <article class="eg-card">
         <figure class="eg-card-img">
-          <img src="https://images.pexels.com/photos/3844586/pexels-photo-3844586.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          <img src="{{ asset('assets/images/micro.png') }}" alt="Covid Image">
                alt="Micronutrient therapy" loading="lazy">
         </figure>
         <h3 class="eg-card-title"><a href="#">Micronutrients</a></h3>
@@ -83,7 +83,8 @@
       <!-- Covid-19 Test -->
       <article class="eg-card">
         <figure class="eg-card-img">
-          <img src="https://images.pexels.com/photos/3825528/pexels-photo-3825528.jpeg?auto=compress&cs=tinysrgb&w=1200"
+         <img src="{{ asset('assets/images/covid19.png') }}" alt="Covid Image">
+
                alt="Covid-19 test collection" loading="lazy">
         </figure>
         <h3 class="eg-card-title"><a href="#">Covid-19 Test</a></h3>
