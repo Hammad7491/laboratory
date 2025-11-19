@@ -65,7 +65,8 @@
     <div class="egc-card">
       <h2 class="egc-h2">Book Appointment</h2>
 
-      <form id="egcForm" class="egc-form" method="POST" action="/send-appointment">
+      {{-- We no longer post to Laravel; EmailJS will handle the send --}}
+      <form id="egcForm" class="egc-form">
         @csrf
 
         <div class="egc-row">
@@ -133,53 +134,49 @@
 </section>
 
 <!-- ============================
-     AJAX SCRIPT FOR LARAVEL MAIL
+     EMAILJS SCRIPT
      ============================ -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
-document.getElementById("egcForm").addEventListener("submit", function(e) {
-    e.preventDefault();
+    // Your EmailJS keys from dashboard
+    const EMAILJS_PUBLIC_KEY  = "khtiQhrM1qILxywg2";
+    const EMAILJS_SERVICE_ID  = "service_tk8erpl";
+    const EMAILJS_TEMPLATE_ID = "template_tiyet9y";
 
-    let form = this;
-    let btn  = document.getElementById("egcSubmit");
-    let status = document.getElementById("egcStatus");
+    // Init EmailJS
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
 
-    btn.disabled = true;
-    status.innerHTML = "Sending...";
-    status.style.color = "#444";
+    const form   = document.getElementById("egcForm");
+    const btn    = document.getElementById("egcSubmit");
+    const status = document.getElementById("egcStatus");
 
-    fetch('/send-appointment', {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { 'X-CSRF-TOKEN': '{{ csrf_token() }}' }
-    })
-    .then(async (res) => {
-        let data = {};
-        try { data = await res.json(); } catch (e) {}
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
-        if (res.ok && data.status === "success") {
-            status.innerHTML = "Appointment sent successfully!";
-            status.style.color = "#0f5132";
-            form.reset();
-        } else {
-            const msg = data.message || "Unknown SMTP error.";
-            status.innerHTML = "Error sending email: " + msg;
-            status.style.color = "#842029";
-        }
-        btn.disabled = false;
-    })
-    .catch(err => {
-        status.innerHTML = "Error sending email: " + err;
-        status.style.color = "#842029";
-        btn.disabled = false;
+        btn.disabled = true;
+        status.innerHTML = "Sending...";
+        status.style.color = "#444";
+
+        // This sends all fields by their name=""
+        emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, "#egcForm")
+            .then(function (response) {
+                status.innerHTML = "Appointment sent successfully!";
+                status.style.color = "#0f5132";
+                form.reset();
+                btn.disabled = false;
+            })
+            .catch(function (error) {
+                console.error("EmailJS error:", error);
+                status.innerHTML = "Error sending email: " + (error.text || "Please try again later.");
+                status.style.color = "#842029";
+                btn.disabled = false;
+            });
     });
-});
 </script>
 
-
 <!-- ============================
-     FULL CSS (DO NOT REMOVE)
+     CSS (same as before)
      ============================ -->
-
 <style>
   .eg-contact{--navy:#001F3F;--navy2:#0a1b37;--ink:#16233d;--muted:#5c6b89;
               --grad:linear-gradient(135deg,#00b894 0%,#00c2ff 60%);font-family:'Poppins',ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink)}
