@@ -68,7 +68,7 @@
           <li>Immigration (AABB) &amp; relationship testing</li>
           <li>Genetic wellness and ancestry reports</li>
         </ol>
-        <a href="#contact" class="dna-btn">
+        <a href="{{ route('contactus') }}" class="dna-btn">
           Schedule DNA Test
         </a>
       </aside>
@@ -142,7 +142,7 @@
 
   <!-- CTA -->
   <div class="dna-cta">
-    <a href="#contact" class="dna-btn-lg">
+    <a href="{{ route('contactus') }}" class="dna-btn-lg">
       Book a DNA Test
     </a>
   </div>

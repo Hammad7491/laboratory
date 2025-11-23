@@ -68,7 +68,7 @@
           <li>Hair follicle drug testing (90-day history)</li>
           <li>Alcohol breath &amp; EtG tests</li>
         </ol>
-        <a href="#contact" style="display:inline-block; margin-top:12px; padding:12px 16px; border-radius:10px; background:linear-gradient(135deg,#001F3F,#00509E); color:#fff; text-decoration:none; font:500 14.5px/1 Poppins, sans-serif; box-shadow:0 12px 22px rgba(0,40,85,.25);">
+        <a href="{{ route('contactus') }}" style="display:inline-block; margin-top:12px; padding:12px 16px; border-radius:10px; background:linear-gradient(135deg,#001F3F,#00509E); color:#fff; text-decoration:none; font:500 14.5px/1 Poppins, sans-serif; box-shadow:0 12px 22px rgba(0,40,85,.25);">
           Schedule Drug Test
         </a>
       </aside>
@@ -130,7 +130,7 @@
 
   <!-- CTA -->
   <div style="max-width:980px; margin:20px auto 36px; padding:0 16px; text-align:center;">
-    <a href="#contact" style="display:inline-block; padding:14px 22px; border-radius:12px; background:linear-gradient(135deg,#001F3F,#00509E); color:#fff; text-decoration:none; font:500 16px/1 Poppins, sans-serif; box-shadow:0 14px 28px rgba(0,40,85,.28); transition:transform .12s ease, filter .2s ease;">
+    <a href="{{ route('contactus') }}" style="display:inline-block; padding:14px 22px; border-radius:12px; background:linear-gradient(135deg,#001F3F,#00509E); color:#fff; text-decoration:none; font:500 16px/1 Poppins, sans-serif; box-shadow:0 14px 28px rgba(0,40,85,.28); transition:transform .12s ease, filter .2s ease;">
       Book a Drug Test
     </a>
   </div>

@@ -65,7 +65,7 @@
 
     <!-- CTA BUTTON -->
     <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
-      <a href="#book" class="eg-btn-primary"
+      <a href="{{ route('contactus') }}" class="eg-btn-primary"
         style="display:inline-block; padding:14px 26px; border-radius:12px;
           background:linear-gradient(135deg,#001F3F,#00509E); color:#fff; text-decoration:none;
           font:500 16px/1 'Poppins';

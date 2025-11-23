@@ -65,7 +65,7 @@
           <li>Respiratory rate &amp; general assessment</li>
           <li>Height/weight (BMI) per request</li>
         </ol>
-        <a href="#contact" class="svc-btn">Schedule Pre-vitals</a>
+        <a href="{{ route('contactus') }}" class="svc-btn">Schedule Pre-vitals</a>
       </aside>
     </div>
   </div>
@@ -128,7 +128,7 @@
   <!-- CTA -->
   <div class="svc-wrap">
     <div class="svc-cta">
-      <a href="#contact" class="svc-btn svc-btn-lg">Book Pre-vital Sign Check</a>
+      <a href="{{ route('contactus') }}" class="svc-btn svc-btn-lg">Book Pre-vital Sign Check</a>
     </div>
   </div>
 </section>

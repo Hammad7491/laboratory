@@ -183,7 +183,7 @@
     <div class="eg-wrap eg-cta-inner">
       <h3>Ready for worry-free care at your place?</h3>
       <p>Tell us where and when — our mobile team will handle the rest.</p>
-      <a href="#contact" class="eg-btn">Book a Mobile Visit</a>
+      <a href="{{ route('contactus') }}" class="eg-btn">Book a Mobile Visit</a>
     </div>
   </div>
 </section>

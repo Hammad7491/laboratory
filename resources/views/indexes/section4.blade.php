@@ -47,13 +47,13 @@
             quality at an affordable cost.
           </p>
 
-          <a href="#contact" class="ega-cta navy">Book a Mobile Draw</a>
+          <a href="{{ route('contactus') }}" class="ega-cta navy">Book a Mobile Draw</a>
         </div>
 
         <!-- IMAGE (direct external image) -->
         <figure class="ega-media">
           <img
-            src="https://images.pexels.com/photos/6129682/pexels-photo-6129682.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            src="{{ asset('assets/images/black.jpg') }}"
             alt="Certified mobile phlebotomist drawing blood at home"
             loading="lazy">
         </figure>

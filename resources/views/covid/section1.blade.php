@@ -64,7 +64,7 @@
           <li>Results sent to provider / portal / employer.</li>
         </ol>
 
-        <a href="#book" class="svc-btn">Book Appointment</a>
+        <a href="{{ route('contactus') }}" class="svc-btn">Book Appointment</a>
       </aside>
     </div>
   </div>
@@ -116,7 +116,7 @@
 
   <!-- CTA -->
   <div class="svc-cta">
-    <a href="#book" class="svc-btn-lg">Schedule COVID-19 Collection</a>
+    <a href="{{ route('contactus') }}" class="svc-btn-lg">Schedule COVID-19 Collection</a>
   </div>
 
 </section>

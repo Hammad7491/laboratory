@@ -43,10 +43,10 @@
       <h4 class="egf-title">Services</h4>
       <ul class="egf-list">
         <li><a href="{{ route('phlebotomy') }}">Phlebotomy</a></li>
-        <li><a href="#">Drug Test</a></li>
-        <li><a href="#">DNA Test</a></li>
-        <li><a href="#">Covid-19 Test</a></li>
-        <li><a href="#">IV Hydration</a></li>
+        <li><a href="{{ route('drug') }}">Drug Test</a></li>
+        <li><a href="{{ route('dna') }}">DNA Test</a></li>
+        <li><a href="{{ route('covid') }}">Covid-19 Test</a></li>
+        <li><a href="{{ route('hydration') }}">IV Hydration</a></li>
       </ul>
     </div>
 

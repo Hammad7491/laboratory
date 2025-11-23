@@ -67,7 +67,7 @@
           <li>Results go to your provider or patient portal.</li>
         </ol>
 
-        <a href="#book" class="svc-btn">Book Mobile Draw</a>
+        <a href="{{ route('contactus') }}" class="svc-btn">Book Mobile Draw</a>
       </aside>
     </div>
   </div>
@@ -114,7 +114,7 @@
 
   <!-- CTA -->
   <div class="svc-cta">
-    <a href="#book" class="svc-btn-lg">Schedule a Mobile Blood Draw</a>
+    <a href="{{ route('contactus') }}" class="svc-btn-lg">Schedule a Mobile Blood Draw</a>
   </div>
 </section>
 

@@ -69,7 +69,7 @@
           <li>Checks are performed with compliant data partners.</li>
           <li>Results and documents delivered securely to HR.</li>
         </ol>
-        <a href="#contact" class="svc-btn">
+        <a href="{{ route('contactus') }}" class="svc-btn">
           Request Screening Setup
         </a>
       </aside>
@@ -81,7 +81,7 @@
     <div class="svc-gallery-grid">
       <figure class="svc-fig">
         <img
-          src="https://images.pexels.com/photos/8854374/pexels-photo-8854374.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          src="{{ asset('assets/images/back1.png') }}"
           alt="Fingerprint scan for identity verification"
           class="svc-fig-img">
         <figcaption class="svc-fig-cap">
@@ -91,7 +91,7 @@
 
       <figure class="svc-fig">
         <img
-          src="https://images.pexels.com/photos/8112195/pexels-photo-8112195.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          src="{{ asset('assets/images/back2.png') }}"
           alt="Document review for background screening"
           class="svc-fig-img">
         <figcaption class="svc-fig-cap">
@@ -101,7 +101,7 @@
 
       <figure class="svc-fig">
         <img
-          src="https://images.pexels.com/photos/618158/pexels-photo-618158.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          src="{{ asset('assets/images/back3.png') }}"
           alt="Team onboarding success"
           class="svc-fig-img">
         <figcaption class="svc-fig-cap">
@@ -140,7 +140,7 @@
 
   <!-- CTA -->
   <div class="svc-cta">
-    <a href="#contact" class="svc-btn-lg">
+    <a href="{{ route('contactus') }}" class="svc-btn-lg">
       Start Background Screening
     </a>
   </div>
