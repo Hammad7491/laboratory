@@ -75,14 +75,14 @@
     <div class="svc-gallery">
       <figure class="svc-fig">
         <img
-          src="https://images.pexels.com/photos/7108355/pexels-photo-7108355.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          src="{{ asset('assets/images/vital1.jpg') }}"
           alt="Blood pressure measurement with cuff">
         <figcaption>Accurate blood pressure and pulse readings.</figcaption>
       </figure>
 
       <figure class="svc-fig">
         <img
-          src="https://images.pexels.com/photos/8376235/pexels-photo-8376235.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          src="{{ asset('assets/images/vital2.jpg') }}"
           alt="Pulse oximeter measuring oxygen saturation">
         <figcaption>Pulse-oximetry for SpO<sub>2</sub> monitoring.</figcaption>
       </figure>
