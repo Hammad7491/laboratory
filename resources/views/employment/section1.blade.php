@@ -79,7 +79,7 @@
     <div class="emp-gallery" style="display:grid; gap:14px; grid-template-columns:1fr 1fr 1fr;">
       <figure style="margin:0; border-radius:14px; overflow:hidden; border:1px solid rgba(2,6,23,.06); box-shadow:0 8px 18px rgba(2,6,23,.06);">
         <img
-          src="https://images.pexels.com/photos/6140735/pexels-photo-6140735.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          src="{{ asset('assets/images/employment.jpg') }}"
           alt="Candidate signing onboarding documents"
           style="width:100%; height:220px; object-fit:cover;">
         <figcaption style="padding:10px 12px; font:400 14px/1.6 Poppins, sans-serif; color:#334155;">Secure e-docs &amp; consent collection.</figcaption>

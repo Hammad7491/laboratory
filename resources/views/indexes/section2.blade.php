@@ -35,7 +35,7 @@
       <!-- IV Hydration -->
       <article class="eg-card">
         <figure class="eg-card-img">
-          <img src="https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          <img src="{{ asset('assets/images/four.jpg') }}"
                alt="IV hydration therapy" loading="lazy">
         </figure>
         <h3 class="eg-card-title"><a href="{{ route('hydration') }}">IV Hydration</a></h3>
@@ -71,7 +71,7 @@
       <!-- DNA Test -->
       <article class="eg-card">
         <figure class="eg-card-img">
-          <img src="https://images.pexels.com/photos/3825529/pexels-photo-3825529.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          <img src="{{ asset('assets/images/dna.jpg') }}"
                alt="DNA analysis in laboratory" loading="lazy">
         </figure>
         <h3 class="eg-card-title"><a href="{{ route('dna') }}">DNA Test</a></h3>

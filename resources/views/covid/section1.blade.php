@@ -17,7 +17,7 @@
         <h1 class="svc-title">COVID-19 Testing &amp; Collection</h1>
 
         <p class="svc-sub">
-          Mobile &amp; on-site RT-PCR and Rapid Antigen collection with certified handling and fast,
+          Mobile &amp; on-site PCR and Rapid Antigen collection with certified handling and fast,
           secure result routing to your provider, portal, or employer.
         </p>
       </div>
@@ -42,12 +42,12 @@
         </p>
 
         <p class="svc-text">
-          Choose <strong>Rapid Antigen</strong> for fast screening or <strong>RT-PCR</strong> for travel, surgery,
+          Choose <strong>Rapid Antigen</strong> for fast screening or <strong>PCR</strong> for travel, surgery,
           and diagnostic confirmation. Results are routed securely to your provider or employer.
         </p>
 
         <ul class="svc-list">
-          <li><span class="dot"></span><span><strong>RT-PCR & Rapid Antigen</strong> (nasal, per lab protocol)</span></li>
+          <li><span class="dot"></span><span><strong>PCR & Rapid Antigen</strong> (nasal, per lab protocol)</span></li>
           <li><span class="dot"></span><span><strong>Certified handling</strong> and chain-of-custody compliance</span></li>
           <li><span class="dot"></span><span><strong>Employer & travel</strong> documentation support</span></li>
         </ul>
@@ -74,7 +74,7 @@
     <div class="svc-gallery-grid">
 
       <figure class="svc-fig">
-        <img src="https://images.pexels.com/photos/5863393/pexels-photo-5863393.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        <img src="{{ asset('assets/images/covid1.jpg') }}"
              class="svc-fig-img">
         <figcaption class="svc-fig-cap">Gentle, lab-protocol nasal swab collection.</figcaption>
       </figure>
@@ -82,7 +82,7 @@
       <figure class="svc-fig">
         <img src="https://images.pexels.com/photos/4031867/pexels-photo-4031867.jpeg?auto=compress&cs=tinysrgb&w=1200"
              class="svc-fig-img">
-        <figcaption class="svc-fig-cap">RT-PCR for travel, surgery, and diagnostics.</figcaption>
+        <figcaption class="svc-fig-cap">PCR for travel, surgery, and diagnostics.</figcaption>
       </figure>
 
       <figure class="svc-fig">
@@ -98,8 +98,8 @@
   <div class="svc-faq">
 
     <details class="faq-item">
-      <summary>Which test should I choose—Rapid Antigen or RT-PCR?</summary>
-      <div>Antigen is fast screening. RT-PCR is required for travel, pre-op and clinical confirmation.</div>
+      <summary>Which test should I choose—Rapid Antigen or PCR?</summary>
+      <div>Antigen is fast screening. PCR is required for travel, pre-op and clinical confirmation.</div>
     </details>
 
     <details class="faq-item">
