@@ -38,7 +38,7 @@
           <img src="https://images.pexels.com/photos/3844581/pexels-photo-3844581.jpeg?auto=compress&cs=tinysrgb&w=1200"
                alt="IV hydration therapy" loading="lazy">
         </figure>
-        <h3 class="eg-card-title"><a href="#">IV Hydration</a></h3>
+        <h3 class="eg-card-title"><a href="{{ route('hydration') }}">IV Hydration</a></h3>
         <p class="eg-card-text">
           Replenish fluids, vitamins, and electrolytes with clinically formulated IV drips to support energy, recovery, and overall wellness.
         </p>
@@ -62,7 +62,7 @@
           <img src="{{ asset('assets/images/drug.png') }}" 
                alt="Urine drug test sample cup" loading="lazy">
         </figure>
-        <h3 class="eg-card-title"><a href="#">Drug Test</a></h3>
+        <h3 class="eg-card-title"><a href="{{ route('drug') }}">Drug Test</a></h3>
         <p class="eg-card-text">       
           Reliable urine and lab-based screenings for pre-employment, compliance, or random drug testing. Fast, confidential, and certified collection.
         </p>
@@ -74,7 +74,7 @@
           <img src="https://images.pexels.com/photos/3825529/pexels-photo-3825529.jpeg?auto=compress&cs=tinysrgb&w=1200"
                alt="DNA analysis in laboratory" loading="lazy">
         </figure>
-        <h3 class="eg-card-title"><a href="#">DNA Test</a></h3>
+        <h3 class="eg-card-title"><a href="{{ route('dna') }}">DNA Test</a></h3>
         <p class="eg-card-text">
           Legal and informational DNA collection with verified chain-of-custody where required. Discreet, accurate, and secure.
         </p>
@@ -83,13 +83,13 @@
       <!-- Covid-19 Test -->
       <article class="eg-card">
         <figure class="eg-card-img">
-         <img src="{{ asset('assets/images/covid19.png') }}" alt="Covid Image">
+         <img src="{{ asset('assets/images/covid.png') }}" alt="Covid Image">
 
                alt="Covid-19 test collection" loading="lazy">
         </figure>
-        <h3 class="eg-card-title"><a href="#">Covid-19 Test</a></h3>
+        <h3 class="eg-card-title"><a href="{{ route('covid') }}">Covid-19 Test</a></h3>
         <p class="eg-card-text">
-          Rapid antigen and RT-PCR collection with certified handling and swift result routing to your provider or employer.
+          Rapid PCR collection with certified handling and swift result routing to your provider or employer.
         </p>
       </article>
 
@@ -99,7 +99,7 @@
           <img src="https://images.pexels.com/photos/7735770/pexels-photo-7735770.jpeg?auto=compress&cs=tinysrgb&w=1200"
                alt="Background check identity verification" loading="lazy">
         </figure>
-        <h3 class="eg-card-title"><a href="#">Background Check</a></h3>
+        <h3 class="eg-card-title"><a href="{{ route('background') }}">Background Check</a></h3>
         <p class="eg-card-text">
           Identity verification and compliant screening solutions for hiring, licensing, and placement programs.
         </p>
@@ -111,7 +111,7 @@
           <img src="{{ asset('assets/images/pre.png') }}" 
                alt="Pre-employment document signing" loading="lazy">
         </figure>
-        <h3 class="eg-card-title"><a href="#">Pre-employment Verification</a></h3>
+        <h3 class="eg-card-title"><a href="{{ route('employment') }}">Pre-employment Verification</a></h3>
         <p class="eg-card-text">
           End-to-end onboarding checks: drug testing, document collection, and verification—streamlined for HR teams.
         </p>

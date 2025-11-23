@@ -36,7 +36,7 @@
         color:#ffffff;
         text-shadow:0 3px 10px rgba(0,0,0,.35);
       ">
-        We test
+        Professional testing
       </span>
 
       <!-- YOU RELAX AT HOME (Genix matching gradient + white highlight) -->
@@ -52,7 +52,7 @@
         color:transparent;
         text-shadow:0 2px 6px rgba(0,0,0,0.12);    /* very soft shadow, no darkness */
       ">
-        You relax at home
+        Wherever you a need us
       </span>
 
     </div>
