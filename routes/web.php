@@ -52,3 +52,8 @@ Route::get('/phlebotomy', [PagesController::class, 'phlebotomy'])
      
 Route::post('/send-appointment', [ContactController::class, 'send'])
      ->name('send-appointment');
+
+
+  Route::get('/bundles', [PagesController::class, 'bundles'])
+     ->name('bundles');
+     

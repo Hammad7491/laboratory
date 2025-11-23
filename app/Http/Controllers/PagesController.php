@@ -74,5 +74,13 @@ class PagesController extends Controller
     }
 
 
+
+    public function bundles()
+    {
+        return view('bundles');
+    }
+     
+
+
     
 }
