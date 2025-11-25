@@ -3,9 +3,9 @@
   <!-- Hero -->
   <div class="drug-hero" style="position:relative; overflow:hidden; border-radius:18px; max-width:1100px; margin:0 auto 28px;">
     <img
-      src="https://images.pexels.com/photos/3825529/pexels-photo-3825529.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      src="https://media.istockphoto.com/id/1444937345/photo/hand-doctor-holding-urine-and-blood-tube-test-for-analysis-for-doping-or-drugs.jpg?s=612x612&w=0&k=20&c=LeuFi_uGcKc1y4lgqkyZoTWPpWshf27d7jgsQtlK7Fo="
       alt="Laboratory technician performing drug test analysis"
-      style="width:100%; height:420px; object-fit:cover; display:block; filter:saturate(105%);">
+      style="width:100%; height:420px; object-fit:cover; object-position:center bottom; display:block; filter:saturate(105%);">
     <div style="position:absolute; inset:0; background:linear-gradient(180deg,rgba(10,18,36,.55),rgba(10,18,36,.55));"></div>
 
     <div style="position:absolute; inset:0; display:grid; place-items:center; text-align:center; color:#fff; padding:24px;">
