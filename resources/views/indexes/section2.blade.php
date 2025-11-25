@@ -21,7 +21,7 @@
       <!-- Phlebotomy -->
       <article class="eg-card">
         <figure class="eg-card-img">
-          <img src="https://images.pexels.com/photos/6129682/pexels-photo-6129682.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          <img src="{{ asset('assets/images/p5.png') }}"
                alt="Phlebotomy blood draw at home" loading="lazy">
         </figure>
         <h3 class="eg-card-title">

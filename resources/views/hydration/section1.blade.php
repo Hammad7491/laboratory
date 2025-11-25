@@ -64,21 +64,21 @@
   <div style="max-width:1100px; margin:26px auto 6px; padding:0 16px;">
     <div class="hyd-gallery" style="display:grid; gap:14px; grid-template-columns:1fr 1fr 1fr;">
       <figure style="margin:0; border-radius:14px; overflow:hidden; border:1px solid rgba(2,6,23,.06); box-shadow:0 8px 18px rgba(2,6,23,.06);">
-        <img src="https://images.pexels.com/photos/6234599/pexels-photo-6234599.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        <img src="{{ asset('assets/images/hydration1.png') }}"
              alt="IV cannula placed on patient hand for hydration"
              style="width:100%; height:220px; object-fit:cover;">
         <figcaption style="padding:10px 12px; font:400 14px/1.6 Poppins, sans-serif; color:#334155;">Hydration therapy via peripheral IV line.</figcaption>
       </figure>
 
       <figure style="margin:0; border-radius:14px; overflow:hidden; border:1px solid rgba(2,6,23,.06); box-shadow:0 8px 18px rgba(2,6,23,.06);">
-        <img src="https://images.pexels.com/photos/6234617/pexels-photo-6234617.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        <img src="{{ asset('assets/images/hydration2.png') }}"
              alt="IV drip bag and chamber during infusion"
              style="width:100%; height:220px; object-fit:cover;">
         <figcaption style="padding:10px 12px; font:400 14px/1.6 Poppins, sans-serif; color:#334155;">Balanced fluids, vitamins & electrolytes.</figcaption>
       </figure>
 
       <figure style="margin:0; border-radius:14px; overflow:hidden; border:1px solid rgba(2,6,23,.06); box-shadow:0 8px 18px rgba(2,6,23,.06);">
-        <img src="https://images.pexels.com/photos/6234616/pexels-photo-6234616.jpeg?auto=compress&cs=tinysrgb&w=1200"
+        <img src="{{ asset('assets/images/hydration3.png') }}"
              alt="Nurse adjusting IV flow for patient"
              style="width:100%; height:220px; object-fit:cover;">
         <figcaption style="padding:10px 12px; font:400 14px/1.6 Poppins, sans-serif; color:#334155;">Administered by trained clinicians.</figcaption>

@@ -59,7 +59,7 @@
 
     <!-- KICKER -->
     <p class="eg-kicker"
-      style="margin:16px 0 70px 0; font:500 14px/1.2 'Poppins'; letter-spacing:.35em; text-transform:uppercase; opacity:.95;">
+      style="margin:16px 0 70px 0; font:500 14px/1.2 'Poppins';  text-transform:uppercase; opacity:.95;">
       Welcome – Convenience Testing & Wellness Services
     </p>
 

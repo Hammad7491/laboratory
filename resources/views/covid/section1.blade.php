@@ -4,8 +4,8 @@
   <!-- HERO -->
   <div class="svc-hero">
     <img
-      src="https://images.pexels.com/photos/5863389/pexels-photo-5863389.jpeg?auto=compress&cs=tinysrgb&w=1600"
-      alt="Healthcare professional collecting a nasal swab for COVID-19 test"
+      src="https://backbone.naz.edu/uploads/Covid_testing.jpg"
+      alt="COVID-19 testing illustration"
       class="svc-hero-img">
 
     <div class="svc-hero-overlay"></div>
@@ -139,8 +139,9 @@
 
   .svc-hero-img {
     width:100%;
-    height:420px;
-    object-fit:cover;
+    height:420px;         /* fixed hero height */
+    object-fit:cover;     /* keep full-width cover */
+    object-position:center bottom; /* show more bottom (TESTING text) */
     filter:saturate(104%);
   }
 
