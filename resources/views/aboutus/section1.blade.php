@@ -106,35 +106,35 @@
     </div>
   </div>
 
-  <!-- GALLERY -->
-  <div class="eg-wrap">
+  <!-- GALLERY (updated images + extra bottom gap) -->
+  <div class="eg-wrap eg-gallery-wrap">
     <div class="eg-grid eg-grid-4">
       <figure class="eg-figure sm">
         <img
-          src="https://images.pexels.com/photos/7108355/pexels-photo-7108355.jpeg?auto=compress&cs=tinysrgb&w=1200"
-          alt="Blood pressure check at home visit">
-        <figcaption>Vitals and pre-visit screening on site.</figcaption>
+          src="https://images.pexels.com/photos/8460347/pexels-photo-8460347.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          alt="Healthcare professional preparing a patient's arm for blood draw">
+        <figcaption>Gentle, professional venipuncture collections.</figcaption>
       </figure>
 
       <figure class="eg-figure sm">
         <img
-          src="https://images.pexels.com/photos/6129682/pexels-photo-6129682.jpeg?auto=compress&cs=tinysrgb&w=1200"
-          alt="At-home blood draw mobile service">
-        <figcaption>Certified mobile phlebotomy.</figcaption>
+          src="https://images.pexels.com/photos/5206977/pexels-photo-5206977.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          alt="Close-up of gloved hands drawing a blood sample with a syringe">
+        <figcaption>Strict sterile technique for every sample.</figcaption>
       </figure>
 
       <figure class="eg-figure sm">
         <img
-          src="https://images.pexels.com/photos/6234617/pexels-photo-6234617.jpeg?auto=compress&cs=tinysrgb&w=1200"
-          alt="IV hydration bag and chamber">
-        <figcaption>IV hydration & wellness add-ons.</figcaption>
+          src="https://images.pexels.com/photos/6285364/pexels-photo-6285364.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          alt="Patient seated while nurse prepares for blood collection">
+        <figcaption>Calm, comfortable collections in a clinical setting.</figcaption>
       </figure>
 
       <figure class="eg-figure sm">
         <img
-          src="https://images.pexels.com/photos/5904788/pexels-photo-5904788.jpeg?auto=compress&cs=tinysrgb&w=1200"
-          alt="DNA cheek swab collection kit">
-        <figcaption>DNA / legal collections with custody.</figcaption>
+          src="https://images.pexels.com/photos/6285347/pexels-photo-6285347.jpeg?auto=compress&cs=tinysrgb&w=1200"
+          alt="Nurse performing a blood test procedure on a patient">
+        <figcaption>Focused testing support for your providers.</figcaption>
       </figure>
     </div>
   </div>
@@ -196,13 +196,18 @@
   }
   .eg-wrap{max-width:1200px;margin:0 auto;padding:0 18px}
 
-  /* Gradient text fix */
+  /* extra gap under gallery block */
+  .eg-gallery-wrap{
+    margin-bottom:26px;   /* adjust this up/down if you want more/less space */
+  }
+
+  /* Gradient text */
   .eg-dual{
     background:var(--grad);
     -webkit-background-clip:text;
     background-clip:text;
-    color:transparent;               /* critical: prevents solid block */
-    display:inline-block;            /* avoids layout glitches */
+    color:transparent;
+    display:inline-block;
     line-height:1.1;
   }
 
