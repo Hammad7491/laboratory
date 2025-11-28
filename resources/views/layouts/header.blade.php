@@ -36,7 +36,7 @@
 
           <div class="eg-mega" role="menu" aria-label="Services">
             <div class="eg-mega-col">
-              <div class="eg-mega-title">SERVICES AVAILABLE ALL LOCATIONS</div>
+              
               <ul class="eg-mega-list">
                 <li><a href="{{ route('phlebotomy') }}">Phlebotomy</a></li>
                 <li><a href="{{ route('covid') }}">Covid-19 Test</a></li>
@@ -47,7 +47,7 @@
             </div>
 
             <div class="eg-mega-col">
-              <div class="eg-mega-title">SERVICES AVAILABLE AT SELECT LOCATIONS</div>
+              
               <ul class="eg-mega-list">
                 <li><a href="{{ route('drug') }}">Drug Test</a></li>
                 <li><a href="{{ route('dna') }}">DNA Test</a></li>
