@@ -36,7 +36,6 @@
 
           <div class="eg-mega" role="menu" aria-label="Services">
             <div class="eg-mega-col">
-              
               <ul class="eg-mega-list">
                 <li><a href="{{ route('phlebotomy') }}">Phlebotomy</a></li>
                 <li><a href="{{ route('covid') }}">Covid-19 Test</a></li>
@@ -47,7 +46,6 @@
             </div>
 
             <div class="eg-mega-col">
-              
               <ul class="eg-mega-list">
                 <li><a href="{{ route('drug') }}">Drug Test</a></li>
                 <li><a href="{{ route('dna') }}">DNA Test</a></li>
@@ -60,7 +58,7 @@
 
         <li><a href="{{ route('location') }}" class="eg-link">Locations</a></li>
 
-        <!-- ⭐ NEW BUNDLES BUTTON -->
+        <!-- Bundles -->
         <li><a href="{{ route('bundles') }}" class="eg-link">Bundles</a></li>
 
         <li><a href="{{ route('aboutus') }}" class="eg-link">About Us</a></li>
@@ -68,49 +66,49 @@
       </ul>
     </nav>
   </div>
-
-  <!-- Mobile Menu -->
-  <div id="egMobile" class="eg-mobile" role="dialog" aria-modal="true" aria-label="Mobile navigation">
-    <ul class="eg-m-list">
-
-      <li><a href="{{ url('/') }}">Home</a></li>
-
-      <li class="eg-m-acc">
-        <button class="eg-m-acc-btn" type="button" aria-expanded="false" aria-controls="mServices">
-          Services
-          <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="#002855" stroke-width="2"/></svg>
-        </button>
-
-        <div id="mServices" class="eg-m-mega">
-          <div class="eg-m-mega-col">
-            
-            <a href="{{ route('phlebotomy') }}">Phlebotomy</a>
-            <a href="{{ route('covid') }}">Covid-19 Test</a>
-            <a href="{{ route('background') }}">Background Check</a>
-            <a href="{{ route('vital') }}">Pre-vital Sign Check</a>
-            <a href="{{ route('employment') }}">Pre-employment Verification</a>
-          </div>
-
-          <div class="eg-m-mega-col">
-            
-            <a href="{{ route('drug') }}">Drug Test</a>
-            <a href="{{ route('dna') }}">DNA Test</a>
-            <a href="{{ route('live') }}">Live FingerPrint Screen</a>
-            <a href="{{ route('hydration') }}">IV Hydration</a>
-          </div>
-        </div>
-      </li>
-
-      <li><a href="{{ route('location') }}">Locations</a></li>
-
-      <!-- ⭐ NEW MOBILE BUNDLES BUTTON -->
-      <li><a href="{{ route('bundles') }}">Bundles</a></li>
-
-      <li><a href="{{ route('aboutus') }}">About Us</a></li>
-      <li><a class="eg-m-cta" href="{{ route('contactus') }}">Contact Us</a></li>
-    </ul>
-  </div>
 </header>
+
+<!-- Mobile Menu (separate, scrollable panel under fixed header) -->
+<div id="egMobile" class="eg-mobile" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <ul class="eg-m-list">
+
+    <li><a href="{{ url('/') }}">Home</a></li>
+
+    <li class="eg-m-acc">
+      <button class="eg-m-acc-btn" type="button" aria-expanded="false" aria-controls="mServices">
+        Services
+        <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M6 9l6 6 6-6" stroke="#002855" stroke-width="2" fill="none"/>
+        </svg>
+      </button>
+
+      <div id="mServices" class="eg-m-mega">
+        <div class="eg-m-mega-col">
+          <a href="{{ route('phlebotomy') }}">Phlebotomy</a>
+          <a href="{{ route('covid') }}">Covid-19 Test</a>
+          <a href="{{ route('background') }}">Background Check</a>
+          <a href="{{ route('vital') }}">Pre-vital Sign Check</a>
+          <a href="{{ route('employment') }}">Pre-employment Verification</a>
+        </div>
+
+        <div class="eg-m-mega-col">
+          <a href="{{ route('drug') }}">Drug Test</a>
+          <a href="{{ route('dna') }}">DNA Test</a>
+          <a href="{{ route('live') }}">Live FingerPrint Screen</a>
+          <a href="{{ route('hydration') }}">IV Hydration</a>
+        </div>
+      </div>
+    </li>
+
+    <li><a href="{{ route('location') }}">Locations</a></li>
+
+    <!-- Mobile Bundles -->
+    <li><a href="{{ route('bundles') }}">Bundles</a></li>
+
+    <li><a href="{{ route('aboutus') }}">About Us</a></li>
+    <li><a class="eg-m-cta" href="{{ route('contactus') }}">Contact Us</a></li>
+  </ul>
+</div>
 <!-- HEADER END -->
 
 <!-- FONT -->
@@ -121,13 +119,27 @@
   .eg-header, .eg-header *{font-family:'Poppins',ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;box-sizing:border-box}
   html,body{max-width:100%;overflow-x:hidden}
 
-  .eg-logo{width:42px;height:42px;object-fit:contain;border-radius:10px;box-shadow:0 8px 18px rgba(0,0,0,.06);}
+  .eg-logo{
+    width:42px;height:42px;object-fit:contain;border-radius:10px;
+    box-shadow:0 8px 18px rgba(0,0,0,.06);
+  }
   .eg-brand-name{display:flex;gap:4px;line-height:1}
   .eg-emma{font-weight:700;font-size:24px;color:#001F3F}
-  .eg-genix{font-weight:700;font-size:24px;background:linear-gradient(135deg,#00b894,#00c2ff);-webkit-background-clip:text;color:transparent}
+  .eg-genix{
+    font-weight:700;font-size:24px;
+    background:linear-gradient(135deg,#00b894,#00c2ff);
+    -webkit-background-clip:text;color:transparent
+  }
 
-  @media (min-width:992px){.d-lg-block{display:block!important}.d-lg-none{display:none!important}}
-  @media (max-width:991.98px){.d-lg-block{display:none!important}.d-lg-none{display:inline-grid!important}}
+  @media (min-width:992px){
+    .d-lg-block{display:block!important}
+    .d-lg-none{display:none!important}
+    .eg-mobile{display:none!important}
+  }
+  @media (max-width:991.98px){
+    .d-lg-block{display:none!important}
+    .d-lg-none{display:inline-grid!important}
+  }
 
   .eg-menu{list-style:none;display:flex;align-items:center;gap:6px}
   .eg-link{
@@ -144,7 +156,7 @@
     box-shadow:0 8px 20px rgba(0,40,85,.20)!important;
   }
 
-  /* Mega dropdown */
+  /* Mega dropdown (desktop) */
   .eg-has-mega{position:relative}
   .eg-caret{transition:.18s}
   .eg-has-mega:hover .eg-caret{transform:rotate(180deg)}
@@ -152,10 +164,13 @@
   .eg-mega{
     position:absolute;left:50%;top:calc(100% + 8px);transform:translateX(-50%) scale(.98);
     background:#fff;border:1px solid rgba(15,23,42,.06);border-radius:18px;padding:18px;
-    width:clamp(560px, 70vw, 980px);opacity:0;pointer-events:none;transition:.15s;
-    display:grid;grid-template-columns:1fr 1fr;gap:28px;box-shadow:0 22px 46px rgba(15,23,42,.12);
+    width:clamp(560px,70vw,980px);opacity:0;pointer-events:none;transition:.15s;
+    display:grid;grid-template-columns:1fr 1fr;gap:28px;
+    box-shadow:0 22px 46px rgba(15,23,42,.12);
   }
-  .eg-has-mega:hover .eg-mega{opacity:1;pointer-events:auto;transform:translateX(-50%) scale(1)}
+  .eg-has-mega:hover .eg-mega{
+    opacity:1;pointer-events:auto;transform:translateX(-50%) scale(1);
+  }
 
   .eg-mega-title{font-size:13px;color:#002855;font-weight:600;text-transform:uppercase}
   .eg-mega-list{list-style:none;display:grid;gap:10px}
@@ -165,8 +180,21 @@
   }
   .eg-mega-list a:hover{background:#f0f6ff;border-color:#cdddf5}
 
-  /* Mobile menu */
-  .eg-mobile{display:none;background:#fff;border-top:1px solid rgba(2,6,23,.06);box-shadow:0 16px 36px rgba(2,6,23,.1)}
+  /* Mobile menu: fixed panel, scrollable */
+  .eg-mobile{
+    display:none;
+    position:fixed;
+    left:0;
+    right:0;
+    top:0; /* will be set dynamically from JS = header bottom */
+    bottom:0;
+    background:#fff;
+    border-top:1px solid rgba(2,6,23,.06);
+    box-shadow:0 16px 36px rgba(2,6,23,.1);
+    overflow-y:auto;
+    -webkit-overflow-scrolling:touch;
+    z-index:998;
+  }
   .eg-mobile.show{display:block}
   .eg-m-list{list-style:none;padding:14px}
   .eg-mobile a{
@@ -192,47 +220,90 @@
 </style>
 
 <script>
+/* Mobile toggle + scrollable menu */
 (function(){
-  const t=document.getElementById('egToggle');
-  const m=document.getElementById('egMobile');
-  const header=document.querySelector('.eg-header');
+  const t = document.getElementById('egToggle');
+  const m = document.getElementById('egMobile');
+  const header = document.querySelector('.eg-header');
+  if(!t || !m || !header) return;
 
-  const open=()=>{m.classList.add('show');t.setAttribute('aria-expanded','true');};
-  const close=()=>{m.classList.remove('show');t.setAttribute('aria-expanded','false');};
+  const setMobileTop = () => {
+    const rect = header.getBoundingClientRect();
+    m.style.top = rect.bottom + 'px';
+  };
 
-  t?.addEventListener('click',()=> m.classList.contains('show')?close():open());
-  document.addEventListener('click',e=>{ if(!header.contains(e.target)) close(); });
-  document.addEventListener('keydown',e=>{ if(e.key==='Escape') close(); });
+  const open = () => {
+    setMobileTop();
+    m.classList.add('show');
+    t.setAttribute('aria-expanded','true');
+  };
 
-  const acc=document.querySelector('.eg-m-acc');
-  const btn=acc?.querySelector('.eg-m-acc-btn');
-  btn?.addEventListener('click',()=> acc.classList.toggle('open'));
-  m.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+  const close = () => {
+    m.classList.remove('show');
+    t.setAttribute('aria-expanded','false');
+  };
+
+  t.addEventListener('click', () => {
+    m.classList.contains('show') ? close() : open();
+  });
+
+  document.addEventListener('click', e => {
+    if (!header.contains(e.target) && !m.contains(e.target)) {
+      close();
+    }
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') close();
+  });
+
+  const acc = document.querySelector('.eg-m-acc');
+  const btn = acc?.querySelector('.eg-m-acc-btn');
+  btn?.addEventListener('click', () => {
+    acc.classList.toggle('open');
+  });
+
+  m.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+
+  window.addEventListener('resize', () => {
+    if (m.classList.contains('show')) {
+      setMobileTop();
+    }
+  });
 })();
 
+/* Desktop mega menu ARIA */
 (function(){
-  const trigger=document.querySelector('.eg-mega-trigger');
-  const holder=document.querySelector('.eg-has-mega');
-  if(!trigger||!holder)return;
-  holder.addEventListener('mouseenter',()=>trigger.setAttribute('aria-expanded','true'));
-  holder.addEventListener('mouseleave',()=>trigger.setAttribute('aria-expanded','false'));
+  const trigger = document.querySelector('.eg-mega-trigger');
+  const holder = document.querySelector('.eg-has-mega');
+  if(!trigger || !holder) return;
+  holder.addEventListener('mouseenter', () => trigger.setAttribute('aria-expanded','true'));
+  holder.addEventListener('mouseleave', () => trigger.setAttribute('aria-expanded','false'));
 })();
 
+/* Spacer for fixed header + scroll state */
 (function(){
-  const header=document.querySelector('.eg-header');
-  const spacer=document.createElement('div');
-  spacer.id='eg-header-spacer';
+  const header = document.querySelector('.eg-header');
+  if(!header) return;
+
+  const spacer = document.createElement('div');
+  spacer.id = 'eg-header-spacer';
   document.body.prepend(spacer);
 
-  const setSpacer=()=> spacer.style.height=header.offsetHeight+'px';
+  const setSpacer = () => {
+    spacer.style.height = header.offsetHeight + 'px';
+  };
   setSpacer();
-  window.addEventListener('resize',setSpacer);
+  window.addEventListener('resize', setSpacer);
 
-  const onScroll=()=> window.scrollY>8
-      ?header.classList.add('is-scrolled')
-      :header.classList.remove('is-scrolled');
-
+  const onScroll = () => {
+    if (window.scrollY > 8){
+      header.classList.add('is-scrolled');
+    } else {
+      header.classList.remove('is-scrolled');
+    }
+  };
   onScroll();
-  window.addEventListener('scroll',onScroll,{passive:true});
+  window.addEventListener('scroll', onScroll, {passive:true});
 })();
 </script>
