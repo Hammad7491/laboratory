@@ -83,7 +83,7 @@
 
         <div id="mServices" class="eg-m-mega">
           <div class="eg-m-mega-col">
-            <div class="eg-m-mega-title">All Locations</div>
+            
             <a href="{{ route('phlebotomy') }}">Phlebotomy</a>
             <a href="{{ route('covid') }}">Covid-19 Test</a>
             <a href="{{ route('background') }}">Background Check</a>
@@ -92,7 +92,7 @@
           </div>
 
           <div class="eg-m-mega-col">
-            <div class="eg-m-mega-title">Select Locations</div>
+            
             <a href="{{ route('drug') }}">Drug Test</a>
             <a href="{{ route('dna') }}">DNA Test</a>
             <a href="{{ route('live') }}">Live FingerPrint Screen</a>
