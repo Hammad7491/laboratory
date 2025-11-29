@@ -47,7 +47,7 @@
       <!-- Micronutrients -->
       <article class="eg-card">
         <figure class="eg-card-img">
-          <img src="{{ asset('assets/images/micro.png') }}" alt="Covid Image">
+          <img src="{{ asset('assets/images/micro1.png') }}" alt="Covid Image">
                alt="Micronutrient therapy" loading="lazy">
         </figure>
         <h3 class="eg-card-title"><a href="#">Micronutrients</a></h3>
