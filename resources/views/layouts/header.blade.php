@@ -56,10 +56,13 @@
           </div>
         </li>
 
+
+                <li><a href="{{ route('bundles') }}" class="eg-link">Bundles</a></li>
+  
+
         <li><a href="{{ route('location') }}" class="eg-link">Locations</a></li>
 
         <!-- Bundles -->
-        <li><a href="{{ route('bundles') }}" class="eg-link">Bundles</a></li>
 
         <li><a href="{{ route('aboutus') }}" class="eg-link">About Us</a></li>
         <li><a href="{{ route('contactus') }}" class="eg-link eg-cta">Contact Us</a></li>
